@@ -1,36 +1,38 @@
-/*-----------------------------------
-*Author:fan
-*Date:2017.5.22
-*------------------------------------
-*In the following program, which
-*conversion are used in each express?
-*struct X{
-*       int i;
-*       X(int);
-*       X operator+(int);
-*       };
-*struct Y{
-*       int i;
-*       Y(X);
-*       Y operator+(X);
-*       operator int();
-*       };
-*extern X operator*(X,Y);
-*extern int f(X);
-*X x = 1;
-*Y y = x;
-*int i = 2;
-*int main()
-*{
-*   i + 10; y + 10; y + 10 * y;
-*   x + y + i; x * x + i; f(7);
-*   f(y); y + y; 106 + y;
-*}
-*Modify the program so that it will
-*run and print the values of each
-*legal expression.
-*------------------------------------
-*/
+/* -----------------------------------
+ *  Author:fan
+ *  Date:2017.5.22
+ * ------------------------------------
+ *    In the following program, which
+ *  conversion are used in each express?
+ *    struct X{
+ *       int i;
+ *       X(int);
+ *       X operator+(int);
+ *       };
+ *    struct Y{
+ *       int i;
+ *       Y(X);
+ *       Y operator+(X);
+ *       operator int();
+ *       };
+ *    extern X operator*(X,Y);
+ *    extern int f(X);
+ *    X x = 1;
+ *    Y y = x;
+ *    int i = 2;
+ *    int main()
+ *    {
+ *       i + 10; y + 10; y + 10 * y;
+ *       x + y + i; x * x + i; f(7);
+ *       f(y); y + y; 106 + y;
+ *    }
+ *    Modify the program so that it will
+ *  run and print the values of each
+ *  legal expression.
+ * ------------------------------------
+ */
+
+
 #include<iostream>
 using namespace std;
 struct Y;
