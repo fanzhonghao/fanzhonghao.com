@@ -23,8 +23,9 @@ the origin stand for your github url in the following operation before uploading
 <h1>use git to remove a floder</h1>
  <p>
  you can use following orders:  
- <b>git rm "..."  
- git commit -m "remove ..."  
- git push -u origin master</b>  
+ <b>
+ <li>git rm "..."  
+ <li>git commit -m "remove ..."  
+ <li>git push -u origin master</b>  </li>
  all of these
  </p>
