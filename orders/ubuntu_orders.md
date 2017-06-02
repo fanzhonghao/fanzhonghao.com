@@ -25,11 +25,11 @@ The last modification time : 2017.06.01
 >This order is used to delete any thing below the folder
 >
 
-<li>g\+\+ name_of_C\+\+</li>
+<li>g++ name_of_C++</li>
 >This order is used to compile a cplusplus document and name it a.out
 >
 
-<li>g\+\+ name_of_C\+\+ -o newname</li>
+<li>g++ name_of_C++ -o newname</li>
 >This order is used to compile it and name it as newname
 >
 
@@ -45,4 +45,4 @@ The last modification time : 2017.06.01
 >This order is used to check the document's content
 >
 
-Final, thank you for __gaojie's__ help
+Final, thank you for <font color = blue>__gaojie's__</font> help
