@@ -1,3 +1,13 @@
+/* -----------------------
+ *  Author: fanzhonghao
+ *  Date: 2017.06.03
+ * -----------------------
+ *  Description:
+ *    calculate the day
+ *  you enter how far from
+ *  1970.01.01
+ * -----------------------
+ */
 #include<iostream>
 #include<ctime>
 #include<stdlib.h>
@@ -8,7 +18,7 @@ struct Date{
 Date chu_shi;
 int b[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 int leap(int a)
-{//»ÚƒÍ
+{
     if (a%4 == 0 && a%100 != 0 || a%400 == 0) return 1;
     else return 0;
 }

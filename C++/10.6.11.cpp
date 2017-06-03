@@ -33,9 +33,9 @@ int calculate(string a)
 
     int b[100];
     char c[100];
-    int p = chuli(a,b,c);//divide a into num and cauculate char
+    int p = chuli(a,b,c);//divide a into num and calculate char
 
-    return jisuan(b,c,p+1,p);//cauculate
+    return jisuan(b,c,p+1,p);//calculate
 }
 int jisuan(int a[], char b[], int n, int m)
 {
@@ -50,7 +50,7 @@ int jisuan(int a[], char b[], int n, int m)
                     else b[i] = b[i-1];
             }
 			else {
-                    if(a[i+1] == 0) {cout<<"����Ϊ"; return 0;}
+                    if(a[i+1] == 0) {cout<<"error"; return 0;}//the divisor is zero
                     a[i+1] = a[i] / a[i + 1];
                     a[i] = 0;
                     if(i == 0) b[i] = '+';
