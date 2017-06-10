@@ -75,3 +75,14 @@ print ("{0:.10}".format(s))#max width 10
 x = 14613198
 print ("x = ",x)
 print ("{0:b} {0:o} {0:x} {0:X}".format(x))
+#字典
+d1 = dict({"id":1948,"name":"Washer","size":3})
+d2 = dict(id = 1948, name = "Washer", size = 3 )
+d3 = dict([("id",1948),("name","Washer"),("size",3)])
+d4 = dict(zip(("id","name","size"),(1948,"Washer",3)))
+d5 = {"id":1948,"name":"Washer","size":3}
+print(d1)
+print(d2)
+print(d3)
+print(d4)
+print(d5)
