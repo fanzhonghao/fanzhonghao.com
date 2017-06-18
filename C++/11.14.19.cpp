@@ -5,7 +5,7 @@
  *  Description :
  *    This complete class
  *  Ptr_to_T and test it
- * ---------------------- 
+ * ----------------------
  */
 #include <iostream>
 #include<stdlib.h>
@@ -109,14 +109,15 @@ T* Ptr_to_T::operator->()
 }
 int main(int argc, char const *argv[]) {
     T p,v[20],a;
-    Ptr_to_T b(&p,v,a);
+    a = 20;
+    Ptr_to_T b(&v[0],v,a);
     b++;
     b--;
     Ptr_to_T c(&a);
     b = c;
     ++b;
     --b;
-    *b = a;
+    //*b = a;
 
     return 0;
  }

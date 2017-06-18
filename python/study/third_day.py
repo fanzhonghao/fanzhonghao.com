@@ -75,6 +75,11 @@ print ("{0:.10}".format(s))#max width 10
 x = 14613198
 print ("x = ",x)
 print ("{0:b} {0:o} {0:x} {0:X}".format(x))
+
+hair = "black","brown","blone","red" #四元组
+print (hair[:2],"gray",hair[2:])#三元组
+print (hair[:2]+("gray",)+hair[2:])#五元组
+
 #字典
 d1 = dict({"id":1948,"name":"Washer","size":3})
 d2 = dict(id = 1948, name = "Washer", size = 3 )
