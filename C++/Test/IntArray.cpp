@@ -29,8 +29,8 @@ IntArray::IntArray(IntArray& a){
   *this = a;
 }
 IntArray::~IntArray(){
-  /*delete [] pa;*/
-  //此处未明白
+  if(*pa)
+  delete [] pa;
 }
 void IntArray::operator++(int){
   int* s;
