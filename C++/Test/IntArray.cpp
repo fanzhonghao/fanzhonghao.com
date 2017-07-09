@@ -33,13 +33,17 @@ IntArray::~IntArray(){
   delete [] pa;
 }
 void IntArray::operator++(int){
-  int* s;
-  s = pa;
-  *s = *s + 1;
-  s++;
-  *s = *s + 1;
-  s++;
-  *s = *s + 1;
+  int* p = new int[3];
+  int* q = pa;
+  *p = *q + 1;
+  p++;
+  q++;
+  *p = *q + 1;
+  p++;
+  q++;
+  *p = *q + 1;
+  p = p - 2;
+  pa = p;
 }
 int* IntArray::operator[](int a)
 {
