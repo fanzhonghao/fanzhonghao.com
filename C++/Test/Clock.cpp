@@ -26,7 +26,7 @@ public:
   //: minute(a){}
   int get_hour(){return hour;}
   int get_minute(){return minute;}
-  void operator++();
+  Clock& operator++();
   void operator-();
   void operator=(Clock);
   friend ostream& operator<<(ostream& os,const Clock& a){
@@ -34,13 +34,14 @@ public:
     return os;
   }
 };
-void Clock::operator++(){
+Clock& Clock::operator++(){
   minute++;
   if(minute == 60){
     minute = 0;
     hour++;
     if(hour == 24) hour = 0;
   }
+  return *this;
 }
 void Clock::operator-(){
   minute--;
@@ -60,9 +61,8 @@ int main(int argc, char const *argv[]) {
   cout << "Clock c is " << c <<endl;
   cout << "Clock d is " << d <<endl;
 
-  ++d;
-  c = d;
-  //There can't use c = ++d; I don't know why cause it.
+  c = ++d;
+
   cout << "-----------" <<endl;
   cout << "Clock c is " <<c <<endl;
   cout << "Clock d is " <<d <<endl;
