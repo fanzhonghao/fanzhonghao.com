@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script type="text/javascript">
+    if (sessionStorage. count)
+    {
+        sessionStorage.count=Number(sessionStorage.count) +1;
+    }
+    else
+    {
+        sessionStorage. count=1;
+    }
+    document.write("您访问该网站的次数为：" + sessionStorage.count);
+</script>
+</body>
+</html><!--刷新一次记录增加一次，关闭网页时数据清除-->

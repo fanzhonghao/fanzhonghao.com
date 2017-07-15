@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>绘制阴影效果图形</title>
+</head>
+<body>
+<canvas id="canvas" width="200" height="200" style="border: 1px solid #ff0000"></canvas>
+<script type="text/javascript">
+    var elem=document.getElementById("canvas");
+    if(elem && elem.getContext)
+    {
+        var context = elem.getContext("2d");
+        //shadowOffsetX 和 shadowOffsetY: 阴影的x和y偏移量，单位为像素。
+        context.shadowOffsetX = 15;
+        context.shadowOffsetY = 15;
+        //hadowBlur: 设置阴影模糊程度。值越大，越模糊。
+        context.shadowBlur = 10;
+        //shadowColor: 阴影颜色。值与css颜色值一致。
+        //context.shadowColor='rgba(255,0,0,0.5)';或下面的十六进制表示方法
+        context.shadowColor='#f00';
+        context.fillStyle='#00f';
+        context.fillRect(20,20,150,100);
+    }
+</script>
+</body>
+</html>

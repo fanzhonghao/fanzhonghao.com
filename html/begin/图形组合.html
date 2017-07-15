@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>绘制图形组合</title>
+    <script>
+        function draw(id) {
+            var canvas=document.getElementById(id);
+            if(canvas==null)
+                return false;
+            var context=canvas.getContext('2d');
+            var oprtns=new Array(
+              "source-atop",
+                "source-in",
+                "source-out",
+                "source-over",
+                "source-atop",
+                "source-in",
+                "source-out",
+                "source-over",
+                "lighter",
+                "copy",
+                "xor"
+            );
+            var i=10;
+            context.fillStyle="blue";
+            context.fillRect(10,10,60,60);
+            context.globalCompositeOperation=oprtns[i];
+            context.beginPath();
+            context.fillStyle="red";
+            context.arc(60,60,30,0,Math.PI*2,false);
+            context.fill();
+        }
+    </script>
+</head>
+<body onload="draw('canvas');">
+<h1>图形组合</h1>
+<img src="1.jpg" width="800" height="600">
+<img src="2.jpg" width="800" height="600">
+<canvas id="canvas" width="400" height="300"/><br clear="all">
+
+</body>
+</html>

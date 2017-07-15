@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas"width="200"height="100">
+<!--此处放置用于绘制图形的javascript代码。-->
+</canvas>
+<script type="text/javascript">
+var canvas=document.getElementById("myCanvas");
+if (canvas.getContext){
+ alert("该浏览器支持Canvas!");
+}else{
+ alert("该浏览器不支持Canvas!");
+}
+</script>
+</body>
+</html>

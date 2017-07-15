@@ -1,0 +1,23 @@
+<html>
+<head><title>保存与恢复</title></head>
+<body>
+<canvas id="myCanvas" width="500" height="400" style="border:1px solid blue">
+    Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    ctx.fillStyle = "rgb(0,0,255)";
+    ctx.save();
+    ctx.fillRect(50,50,100,100);
+    ctx.fillStyle = "rgb(255,0,0)";
+    ctx.save();
+    ctx.fillRect(200,50,100,100);
+    ctx.restore()
+    ctx.fillRect(350,50,100,100);
+    ctx.restore();
+    ctx.fillRect(50, 200, 100, 100);
+</script>
+</body>
+</html>
+<!--用栈保存canvas状态-->

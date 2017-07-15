@@ -1,0 +1,27 @@
+< html>
+<head>
+    <title>绘制图像平铺</title>
+</head>
+<body onload="draw('canvas');">
+<h1>图形平铺</h1>
+<canvas id="canvas" width="600" height="400"></canvas>
+<script>
+    function draw(id){
+        var canvas=document.getElementById(id);
+        if(canvas==null){
+            return false;
+        }
+        var context=canvas.getContext('2d');
+        context.fillStyle="#eeeeff";
+        context.fillRect(0,0,600,400);
+        image=new Image();
+        image.src="flower.jpg";
+        image.onload=function(){
+            var ptrn=context.createPattern(image,'repeat');<!--repeat全方向平铺，no-repeat不平铺,repeat-x横方向平铺,repeat-y纵方向平铺-->
+            context.fillStyle=ptrn;
+            context.fillRect(0,0,600,400);
+        }
+    }
+</script>
+</body>
+</html>

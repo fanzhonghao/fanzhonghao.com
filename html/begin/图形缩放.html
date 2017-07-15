@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>绘制图形缩放</title>
+    <script>
+        function draw(id) {
+            var canvas=document.getElementById(id);
+            if(canvas==null)
+                return false;
+            var context=canvas.getContext('2d');
+            context.fillStyle="#eeeeff";
+            context.fillRect(0,0,400,300);
+            context.translate(200,50);
+            context.fillStyle='rgba(255,0,0,0.25)';
+            for(var i=0;i<50;i++)
+            {
+                context.scale(3,0.5); <!--缩放方法，表示x方向上全部元素变成两倍，y方向上全部元素变成0.5倍-->
+                context.fillRect(0,0,100,50);
+            }
+        }
+    </script>
+</head>
+<body onload="draw('canvas');">
+<canvas id="canvas" width="400" height="300"/>
+</body>
+</html>

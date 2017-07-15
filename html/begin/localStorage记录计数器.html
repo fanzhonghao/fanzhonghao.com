@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script type="text/javascript">
+    if (localStorage.count)
+    {
+        localStorage.count=Number(localStorage.count) +1;
+    }
+    else
+    {
+        localStorage.count=1;
+    }
+    document.write("您访问该网站的次数为：" + localStorage.count);
+
+</script>
+</body>
+</html>

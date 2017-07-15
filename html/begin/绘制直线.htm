@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas"style="border:1px solid;"width="200"height="100"></canvas>
+<script type="text/javascript">
+var c=document.getElementById("myCanvas");
+var context=c.getContext("2d");
+context.strokeStyle="blue";
+context.moveTo(0,0);
+context.lineTo(200,100);
+context.lineTo(100,0);
+context.lineWidth=10;
+context.stroke();
+context.closePath();
+</script>
+</body>
+</html>
+<!--`contextTo(x,y)规定起点,lineTo(x,y)规定终点,stroke()沿路径绘制直线-->
