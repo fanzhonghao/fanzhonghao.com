@@ -1,0 +1,1 @@
+drop database school_roll;

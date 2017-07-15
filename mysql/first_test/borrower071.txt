@@ -1,0 +1,4 @@
+create table borrower071(
+customer_name char(30),
+account_number char(30)
+);

@@ -1,0 +1,24 @@
+insert into branch071
+values('Brighton','Brooklyn',7100000);
+insert into branch071
+values('Mianus','Horseneck',400000);
+
+insert into branch071
+values('North Town','Rye',3700000);
+
+insert into branch071
+values('Perryridge','Horseneck',1700000);
+
+insert into branch071
+values('Pownal','Benninggton',300000);
+
+insert into branch071
+values('Redwood','Palo Alto',2100000);
+
+insert into branch071
+values('Round Hill','Horseneck',8000000);
+
+insert into branch071
+values('Downtown','Brooklyn',9000000);
+
+

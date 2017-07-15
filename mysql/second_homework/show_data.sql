@@ -1,0 +1,11 @@
+use travel;
+select *
+from FLIGHTS;
+select *
+from HOTELS;
+select *
+from BUS;
+select *
+from CUSTOMER;
+select *
+from RESERVATIONS;

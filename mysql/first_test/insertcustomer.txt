@@ -1,0 +1,32 @@
+insert into customer071
+values('Adams','Spring','Pittsfield');
+
+insert into customer071
+values('Brooks','Senator','Brooklyn');
+
+insert into customer071
+values('Curry','North','Rye');
+
+insert into customer071
+values('Glenn','Sand Hill','Woodside');
+
+insert into customer071
+values('Green','Walnut','Stamford');
+
+insert into customer071
+values('Hayes','Main','Harrison');
+
+insert into customer071
+values('Johnson','Alma','Palo Alto');
+
+insert into customer071
+values('Jones','Main','Harrison');
+
+insert into customer071
+values('Smith','North','Rye');
+
+insert into customer071
+values('Turner','Putnam','Stamford');
+
+insert into customer071
+values('Williams','Nassau','Princeton');

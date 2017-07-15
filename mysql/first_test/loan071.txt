@@ -1,0 +1,5 @@
+create table loan071(
+loan_number char(30),
+branch_name char(30),
+amount numeric(12.2)
+);

@@ -33,7 +33,7 @@ IntArray::~IntArray(){
   delete [] pa;
 }
 void IntArray::operator++(int){
-  int* p = new int[3];
+  int* p = new int(3);
   int* q = pa;
   *p = *q + 1;
   p++;

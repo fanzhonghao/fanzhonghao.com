@@ -1,0 +1,6 @@
+select * from account071;
+select * from branch071;
+select * from customer071;
+select * from depositor071;
+select * from loan071;
+select * from borrower071;

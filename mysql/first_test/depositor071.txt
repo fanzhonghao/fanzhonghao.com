@@ -1,0 +1,4 @@
+create table depositor071(
+customer_name char(30),
+account_number char(30)
+);

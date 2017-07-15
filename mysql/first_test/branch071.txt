@@ -1,0 +1,5 @@
+create table BRANCH071(
+branch_name char(30),
+branch_city char(20),
+assets numeric(12.2)
+);

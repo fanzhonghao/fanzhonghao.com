@@ -1,0 +1,5 @@
+create table account071(
+account_number char(10),
+branch_name char(30) NOT NULL,
+balance numeric(12.2)
+);

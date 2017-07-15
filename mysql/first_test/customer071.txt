@@ -1,0 +1,5 @@
+create table customer071(
+customer_name char(30),
+customer_street char(30),
+customer_city char(30)
+);

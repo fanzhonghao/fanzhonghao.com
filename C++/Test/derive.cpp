@@ -22,7 +22,8 @@ class sub : public Base{
 class sub2 : public Base{
   const char c;
   sub2(int x2,char d1) : Base(x2),c(d1) {
-    //c = d1;此处写法错误，因为c为常量，不能在函数中更该？
+    //c = d1;
+    //此处写法错误，因为c为常量，不能在函数中更该？
   }
 };
 class sub3 : public Base{

@@ -1,0 +1,14 @@
+insert into loan071
+values('L-11','Round Hill',900);
+insert into loan071
+values('L-14','Round Downtown',1500);
+insert into loan071
+values('L-15','Perryridge',1500);
+insert into loan071
+values('L-16','Perryridge',1300);
+insert into loan071
+values('L-17','Downtown',1000);
+insert into loan071
+values('L-23','Redwood',2000);
+insert into loan071
+values('L-93','Mianus',500);

@@ -1,0 +1,16 @@
+insert into borrower071
+values('Adams','L-16');
+insert into borrower071
+values('Curry','L-93');
+insert into borrower071
+values('Hayes','L-15');
+insert into borrower071
+values('Jackson','L-14');
+insert into borrower071
+values('Jones','L-17');
+insert into borrower071
+values('Smith','L-11');
+insert into borrower071
+values('Smith','L-23');
+insert into borrower071
+values('Williams','L-17');
