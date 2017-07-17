@@ -8,7 +8,7 @@
  *  is a palindrome string.
  * -------------------------
  */
-import java.util.Scanner;
+import java.util.Scanner;/*输入包*/
 public class palindrome_string{
   public static void main(String[] args) {
     System.out.println("Pleease enter a string: ");
@@ -22,9 +22,9 @@ public class palindrome_string{
         n++;
       }
     }*/
-    
+
     for(int i = 0;i < str.length();i++,n++){
-      if(str.charAt(i) != sb.charAt(i)) break;
+      if(str.charAt(i) != sb.charAt(i)) break;//得到对应位置的字符
     }
 
     if(n == str.length()){
