@@ -9,6 +9,7 @@ import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.border.TitledBorder;
 public class TimeGetAndSet extends JFrame{
+  private static final long serialVersionUID = 1L;
   private JPanel panel;
   private BorderLayout borderLayout1 = new BorderLayout();
   //创建组件实例
