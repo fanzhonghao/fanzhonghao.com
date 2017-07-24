@@ -32,10 +32,11 @@ class Program{
     private double seconds;
     public double hour
     {
-      public get {return seconds/3600;}
+      get {return seconds/3600;}
       set {seconds = value * 3600;} //此处的value的值应该在使用set的时候给出
     }
   }
+
   static void Main(){
     time t = new time();
     t.hour = 24;
