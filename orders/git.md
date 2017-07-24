@@ -1,6 +1,7 @@
-#How to use git hub ?
-
-##Basesd on ubuntu:
+How to use git hub ?
+===
+Basesd on ubuntu:
+---
 + first, you should download git
 + then chose a folder, and enter order "**git init**" and then it will located in it
 + next step you can enter " **git config --global user.name "your name"** "
@@ -23,7 +24,8 @@ the origin stand for your github url in the following operation before uploading
   **git push -u origin master**
   >if it's ok, you will commit your codes
 
-##use git to remove a floder
+use git to remove a floder
+---
  you can use following orders:
  **1. git rm "..."**
  **2. git commit -m "remove ..."**
