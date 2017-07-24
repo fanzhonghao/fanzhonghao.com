@@ -1,33 +1,23 @@
-<h4>Delete mysql</h4>
-<ol>
-<li>sudo apt-get autoremove --purge mysql-server-5.7</li>
-<li>sudo apt-get remove mysql-server</li>
-<li>sudo apt-get autoremove mysql-server</li>
-<li>sudo apt-get remove mysql-common</li>
-</ol>
+###Delete mysql
+1. sudo apt-get autoremove --purge mysql-server-5.7
+2. sudo apt-get remove mysql-server
+3. sudo apt-get autoremove mysql-server
+4. sudo apt-get remove mysql-common
 >Some order above is needless, likes the third and the forth, but they are importment
 >that you should run them over
 
-<h4>Delete residual data</h4>
-<ul>
-<li>dpkg -l |grep ^rc | awk '{print $2}' |sudo xargs dpkg -p
-</li>
-</ul>
+###Delete residual data###
++ dpkg -l |grep ^rc | awk '{print $2}' |sudo xargs dpkg -p
 >Sorry, I don't know the real meaning of above orders, and I can't run it or them
 
-<h4>Install mysql</h4>
-<ol>
-<li>sudo apt-get install mysql-server</li>
-<li>sudo apt-get install mysql-client</li>
-<li>sudo apt-get install php5-mysql</li>
-</ol>
+###Install mysql
++ sudo apt-get install mysql-server
++ sudo apt-get install mysql-client
++ sudo apt-get install php5-mysql
 >The last order is connect php and mysql
 
-<h4>Check whether Mysql is running</h4>
-<ul>
-<li>sudo netstat -tap | grep mysql
-</ul>
-if your server can't run good, you can run the under order to run it
-<ul>
-<li>sudo /etc/init.d/mysql restart
-</ul>
+###Check whether Mysql is running
++ sudo netstat -tap | grep mysql
+>if your server can't run good, you can run the under order to run it
+
++ sudo /etc/init.d/mysql restart
