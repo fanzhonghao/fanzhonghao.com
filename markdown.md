@@ -3,7 +3,7 @@ Markdown语法
 基于github
 ---
 	首先，markdown是兼容HTML的，但是此处不过分考虑HTML,Markdown 的语法全由一些符号所组成。
-###标题：		
+###标题:###
 	Markdown支持两种标题的语法，类 Setext 和类 atx 形式。
 	类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题）,
     不过需要三个或以上的 = 或 - 才有效果。
