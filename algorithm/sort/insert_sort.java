@@ -9,7 +9,8 @@
  *    This method through using
  *  each num compare with those
  *  nums which are sorted and then
- *  insert it at suit site.
+ *  insert it at suit site. The
+ *  follow is ascending sort.
  * --------------------------------
  */
 import java.util.Random;
@@ -41,7 +42,7 @@ public class insert_sort{
         continue;
       }
     }
-    
+
     for(int i = 0;i < array.length;i++){
       System.out.print(array[i] + "\t");
     }

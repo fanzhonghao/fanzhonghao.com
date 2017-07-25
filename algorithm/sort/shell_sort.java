@@ -13,7 +13,8 @@
  *  sorting partly.
  *    There we set three
  *  increments which are 5,3 and
- *  1.
+ *  1. The follow is ascending
+ *  sort.
  * -----------------------------
  */
  import java.util.Random;
@@ -31,7 +32,7 @@ public class shell_sort{
     System.out.println("排序后：");
     int temp = 0,j = 0;
 
-    for (int m = 5;m < 10;m++) {
+    for (int m = 5;m < 10;m++) {//The increments is 5
       for(int i = m;i < data.length;i = i+5){
         if(data[i] >= data[i-5]){
           continue;
@@ -45,7 +46,7 @@ public class shell_sort{
         }
       }
     }
-    for (int m = 3;m < 6;m++) {
+    for (int m = 3;m < 6;m++) {//The increments is 3
       for(int i = m;i < data.length;i = i+3){
         if(data[i] >= data[i-3]){
           continue;
@@ -59,7 +60,7 @@ public class shell_sort{
         }
       }
     }
-    for(int i = 1;i < data.length;i++){
+    for(int i = 1;i < data.length;i++){//The increments is 1
       j = i-1;
       if(data[i] < data[j]){
         temp = data[i];

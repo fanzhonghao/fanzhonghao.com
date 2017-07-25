@@ -9,7 +9,8 @@
  *    This method through finding
  *  out the mininum num over and
  *  over and then insert it at the
- *  suit site.
+ *  suit site.The follow is
+ *  ascending sort.
  * -------------------------------
  */
 import java.util.Random;
