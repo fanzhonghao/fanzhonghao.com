@@ -27,6 +27,7 @@ public class insert_sort{
     System.out.println();
     System.out.println("排序后：");
     int temp = 0,j = 0;
+
     for(int i = 1;i < array.length;i++){
       j = i-1;
       if(array[i] < array[j]){
@@ -40,6 +41,7 @@ public class insert_sort{
         continue;
       }
     }
+    
     for(int i = 0;i < array.length;i++){
       System.out.print(array[i] + "\t");
     }
