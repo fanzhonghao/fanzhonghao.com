@@ -1,0 +1,54 @@
+<!--
+  Author:fan
+  Date:2017.7.26
+  Description:
+    This code is used to explore
+  the use of switch case and
+  the function.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Switch case</title>
+</head>
+<body>
+  <script>
+  <!--
+    function ChangeBgColor(colorIndex) {
+      var dombody = document.getElementById("PageBody");
+      if(dombody == null){
+        return;
+      }else {
+        switch (colorIndex) {
+          case 1:
+            dombody.style.background = "#666666";
+            break;
+          case 2:
+            dombody.style.background = "#00333";
+            break;
+          case 3:
+            dombody.style.background = "#ccccff";
+            break;
+          case 4:
+            dombody.style.background = "#6699cc";
+            break;
+          default:
+            dombody.style.background = "white";
+        }
+      }
+    }
+    -->
+    </script>
+    <div style="width:100px;height:20px;text-align:center;
+    background-color:#666666;" onclick="return ChangeBgColor(1)"></div>
+
+    <div style="width:100px;height:20px;text-align:center;
+    background-color:#003333;" onclick="return ChangeBgColor(2)"></div>
+
+    <div style="width:100px;height:20px;text-align:center;
+    background-color:#ccccff;" onclick="return ChangeBgColor(3)"></div>
+
+    <div style="width:100px;height:20px;text-align:center;
+    background-color:#6699cc;" onclick="return ChangeBgColor(4)"></div>
+  </body>
+  </html>
