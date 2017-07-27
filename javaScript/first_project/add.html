@@ -1,0 +1,33 @@
+<!--
+  Author:fan
+  Date:2017.7.27
+  Description:
+    This is just used to add
+  two numbers.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add</title>
+</head>
+<body>
+  <script>
+  <!--
+    function add(obj1,obj2) {
+      return parseInt(obj1) + parseInt(obj2);
+    }
+  -->
+  function Button() {
+    var obj1 = document.getElementById("obj1");
+    var obj2 = document.getElementById("obj2");
+    var obj3 = document.getElementById("obj3");
+    var sum = add(obj1.value,obj2.value);
+    obj3.value = sum;
+  }
+  </script>
+  <input id="obj1" type="" style="width: 80px" maxlength="20" />+
+  <input id="obj2" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj3" type="text" style="width: 69px" maxlength="20" />
+  <input id="button1" type="button" value="add" onclick="return Button()" />
+</body>
+</html>

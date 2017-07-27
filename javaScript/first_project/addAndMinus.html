@@ -1,0 +1,47 @@
+<!--
+  Author:fan
+  Date:2017.7.26
+  Description:
+    This is just use to realize
+  two numbers' add and minus.
+-->
+<html>
+<head>
+  <title>Add and Minus</title>
+</head>
+<body>
+  <script>
+  <!--
+    function add(obj1,obj2){
+      return parseInt(obj1) + parseInt(obj2);
+    }
+    function minus(obj1,obj2){
+      return parseInt(obj1) - parseInt(obj2);
+    }
+    function button1(){
+      var obj1 = document.getElementById("obj1");
+      var obj2 = document.getElementById("obj2");
+      var obj3 = document.getElementById("obj3");
+      var obj4 = document.getElementById("obj4");
+      var obj5 = document.getElementById("obj5");
+      var obj6 = document.getElementById("obj6");
+      var sum = add(obj1.value,obj2.value);
+      var diff = minus(obj1.value,obj2.value);
+      obj3.value = sum;
+      obj4.value = obj1.value;
+      obj5.value = obj2.value;
+      obj6.value = diff;
+      alert("Today");
+    }
+  -->
+  </script>
+  <input id="obj1" type="text" style="width: 84px" maxlength="20" />+
+  <input id="obj2" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj3" type="text" style="width: 69px" maxlength="20" />
+  <br>
+  <input id="obj4" type="text" style="width: 84px" maxlength="20" />-
+  <input id="obj5" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj6" type="text" style="width: 69px" maxlength="20" />
+  <input id="button" type="button" value="calculate" onclick="return button1()">
+</body>
+</html>

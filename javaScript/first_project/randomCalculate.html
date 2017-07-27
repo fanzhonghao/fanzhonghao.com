@@ -1,0 +1,92 @@
+<!--
+  Author:fan
+  Date:2017.7.27
+  Description:
+    This code use random numbers
+  to calculate.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Calculate</title>
+</head>
+<body>
+  <script>
+  <!--
+    function add(obj1,obj2) {
+      return parseInt(obj1) + parseInt(obj2);
+    }
+    function minus(obj1,obj2) {
+      return parseInt(obj1) - parseInt(obj2);
+    }
+    function mult(obj1,obj2) {
+      return parseInt(obj1) * parseInt(obj2);
+    }
+    function divi(obj1,obj2) {
+      return parseInt(obj1) / parseInt(obj2);
+    }
+    function Button() {
+      var obj1 = document.getElementById("obj1");
+      var obj2 = document.getElementById("obj2");
+
+      var obj4 = document.getElementById("obj4");
+      var obj5 = document.getElementById("obj5");
+
+      var obj7 = document.getElementById("obj7");
+      var obj8 = document.getElementById("obj8");
+
+      var obj10 = document.getElementById("obj10");
+      var obj11 = document.getElementById("obj11");
+      obj1.value = parseInt(Math.random() * 100);
+      obj2.value = parseInt(Math.random() * 100);
+
+      obj4.value = parseInt(Math.random() * 100);
+      obj5.value = parseInt(Math.random() * 100);
+
+      obj7.value = parseInt(Math.random() * 100);
+      obj8.value = parseInt(Math.random() * 100);
+
+      obj10.value = parseInt(Math.random() * 100);
+      obj11.value = parseInt(Math.random() * 10);
+    }
+    function calculate() {
+      var obj1 = document.getElementById("obj1");
+      var obj2 = document.getElementById("obj2");
+      var obj3 = document.getElementById("obj3");
+      var obj4 = document.getElementById("obj4");
+      var obj5 = document.getElementById("obj5");
+      var obj6 = document.getElementById("obj6");
+      var obj7 = document.getElementById("obj7");
+      var obj8 = document.getElementById("obj8");
+      var obj9 = document.getElementById("obj9");
+      var obj10 = document.getElementById("obj10");
+      var obj11 = document.getElementById("obj11");
+      var obj12 = document.getElementById("obj12");
+      obj3.value = add(obj1.value,obj2.value);
+      obj6.value = minus(obj4.value,obj5.value);
+      obj9.value = mult(obj7.value,obj8.value);
+      obj12.value = divi(obj10.value,obj11.value);
+    }
+  -->
+  </script>
+  <h4>Please click on the Random nums button firstly and then click on calculate button!!!</h4>
+  <input id="obj1" type="text" style="width: 84px" maxlength="20" />+
+  <input id="obj2" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj3" type="text" style="width: 69px" maxlength="20" />
+  <br>
+  <input id="obj4" type="text" style="width: 84px" maxlength="20" />-
+  <input id="obj5" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj6" type="text" style="width: 69px" maxlength="20" />
+  <br>
+  <input id="obj7" type="text" style="width: 84px" maxlength="20" />*
+  <input id="obj8" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj9" type="text" style="width: 69px" maxlength="20" />
+  <br>
+  <input id="obj10" type="text" style="width: 84px" maxlength="20" />/
+  <input id="obj11" type="text" style="width: 75px" maxlength="20" />=
+  <input id="obj12" type="text" style="width: 69px" maxlength="20" />
+  <br>
+  <input id="button1" type="button" value="Random nums" onclick="return Button()" >
+  <input id="button2" type="button" value="calculate" onclick="return calculate()">
+</body>
+</html>

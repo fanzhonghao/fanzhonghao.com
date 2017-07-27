@@ -1,0 +1,99 @@
+<!--
+  Author:fan
+  Date:2017.7.27
+  Description:
+    This code is used to realize
+  a easy calculate game.
+  Attention:
+    This method can't maintain the
+  part data after refresh that I
+  will use frame to reduce it.
+-->
+<html>
+<head>
+  <title>Calculate Game</title>
+</head>
+<body bgcolor="#0e1c2f">
+  <script>
+  <!--
+
+    function add(obj1,obj2) {
+      return parseInt(obj1) + parseInt(obj2);
+    }
+    function minus(obj1,obj2) {
+      return parseInt(obj1) - parseInt(obj2);
+    }
+    function mult(obj1,obj2) {
+      return parseInt(obj1) * parseInt(obj2);
+    }
+    function divi(obj1,obj2) {
+      return parseInt( parseInt(obj1) / parseInt(obj2));
+    }
+    function calculate() {
+      //total++;
+      if(symbol == "+"){
+        result = add(num1,num2);
+      }else if (symbol == "-") {
+        result = minus(num1,num2);
+      }else if (symbol == "*") {
+        result = mult(num1,num2);
+      }else {
+        result = divi(num1,num2);
+      }
+      var obj = document.getElementById("answer");
+      if(result == obj.value){
+        alert("You are right");
+        //right++;
+      }else {
+        alert("Sorry, the right answer is " + result);
+      }
+      //accuracy = parseFloat(right) / parseFloat(total);
+      obj.value = null;
+
+      window.location.reload();
+    }
+  -->
+  </script>
+  <h1><center>
+     <script>
+     <!--
+      //var right = 0;
+      //var total = 0;
+      //var accuracy = 0.0;
+      var num1 = parseInt(Math.random() * 10);
+      var num2 = parseInt(Math.random() * 10);
+      var symbol;
+      for(;num1 == 0 || num2 == 0;){
+        num1 = parseInt(Math.random() * 10);
+        num2 = parseInt(Math.random() * 10);
+      }
+      document.write("<font color=pink>" + num1 + "</font>");
+      var temp = parseInt(Math.random() * 4);
+      if(temp == 0 || temp == 4){
+        document.write("<font color=pink>+</font>");
+        symbol = "+";
+      }else if (temp == 1) {
+        document.write("<font color=pink>-</font>");
+        symbol = "-";
+      }else if (temp == 2){
+        document.write("<font color=pink>*</font>");
+        symbol = "*";
+      }else {
+        document.write("<font color=pink>/</font>");
+        symbol = "/";
+      }
+      document.write("<font color=pink>" + num2 + "</font>");
+     -->
+     </script>
+  </center></h1>
+  <h2><font color= pink><script>
+  <!--
+    //document.write(accuracy);
+  -->
+  </script></font><h2>
+  <center><img src="image/1.jpg" width="500" height="400"></center><br>
+  <center><input id="answer" type="text" style="width: 85px"></center>
+  <br>
+  <center><input id="commit" type="button" value="commit" onclick="return calculate()"></center>
+</body>
+</html>
