@@ -1,0 +1,44 @@
+<!--
+  Author:fan
+  Date:2017.7.28
+  Description:
+    This code is used to explore the
+  use of three kinds dialog box.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dialog box</title>
+</head>
+<body onbeforeunload="return onClosing()">
+  <script>
+  <!--
+    function sayhello(){
+      alert("Hello");//警告对话框
+    }
+    function saybye(){
+      alert("Bye");
+    }
+    function onClosing(){//询问对话框
+      if (window.confirm("真的要关闭？")) {
+        return true;
+      }else {
+        return false;
+      }
+    }
+    function question(){//输入对话框
+      var result;
+      result = window.prompt("未来哪个国家最强大？","中国");
+      if (result == "中国") {
+        alert("True");
+      }else {
+        alert("Wrong");
+      }
+    }
+    window.onload = sayhello;
+    window.onunload = saybye;
+  -->
+  </script>
+  <input type="submit" name="Submit" value="答题" onclick="question()">
+</body>
+</html>

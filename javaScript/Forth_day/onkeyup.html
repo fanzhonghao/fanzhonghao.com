@@ -1,0 +1,25 @@
+<!--
+	Author:fan
+	Date:2017.7.28
+	Description:
+		This code is used to description the
+	use of "onkeyup".
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onkeyup</title>
+</head>
+<body>
+	<script>
+		function OnKeyUp(_e) {
+			var e = e? e:window.event;
+			if (event.keyCode == 13) {
+				alert(Text1.value);
+			}
+		}
+	</script>
+	<h1>The Event</h1>
+	<input type="text" id="Text1" onkeyup="OnKeyUp()" style="width: 423px;height: 178px">
+</body>
+</html>

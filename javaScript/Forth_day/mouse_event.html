@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse event</title>
+  <script>
+  <!--
+    function dclick(){
+      form1.text.value = "您双击了页面";
+    }
+    function Click() {
+      form1.text.value = "您单击了页面";
+    }
+    function down() {
+      form1.text.value = "您按下了鼠标";
+    }
+    function up() {
+      form1.text.value = "您释放了鼠标";
+    }
+  -->
+  </script>
+</head>
+<body onmousemove="javascript:this.style.background = '#ffccff';" ondblclick="dclick()"
+onmousedown="down()" onmouseup="up()" onclick="Click()">
+  <ul>
+    <li onmouseout="javascript:this.style.background = '#ff66ff';"
+    onmouseover="javascript:this.style.background = '#00ccc0';">
+      鼠标移过来</li>
+    <form id="form1" method="post" action="">
+      <label>
+        <textarea name="text" cols="50" rows="2"></textarea>
+      </label>
+    </form>
+</body>
+</html>

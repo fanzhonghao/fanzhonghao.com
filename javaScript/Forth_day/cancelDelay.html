@@ -1,0 +1,28 @@
+<!--
+  Author:fan
+  Date:2017.7.28
+  Description:
+    This code is used to show
+  cancel delay execute code.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cancel delay</title>
+</head>
+<body>
+  <script>
+  <!--
+    function showClock() {
+      var ident = new Date();
+      window.status=ident.toLocaleString()
+      ident = window.setTimeout("showClock()",1000);
+    }
+  -->
+  </script>
+  <p>
+    <input type="submit" name="Submit" value="Begin" onclick="showClock()">
+    <input type="submit" name="Submit2" value="Cancel delay" onclick="window.clearTimeout(ident);">
+  </p>
+</body>
+</html>

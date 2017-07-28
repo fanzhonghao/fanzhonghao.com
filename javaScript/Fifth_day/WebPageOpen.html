@@ -1,0 +1,37 @@
+<!--
+  Author:fan
+  Date:2017.7.28
+  Description:
+    This code is used to show
+  open the web page gradually.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web open</title>
+</head>
+<body>
+  <script>
+  <!--
+    var x = 10;//窗口的初始高度为10
+    var y = window.screen.availHeight;//最终高为显示器实际可用高
+    var dx = 5;
+    var newFrm = window.open("","newForm","menubar=0,toolbar=0");
+    newFrm.resizeTo(x,y);
+    var intervalID=window.setInterval("active()",100);
+    function active() {
+      if(newFrm.closed){
+        clearInterval(intervalID);
+        return;
+      }
+      if(x<screen.availWidth){
+        x+=dx;
+      }else {
+        clearInterval(intervalID);}
+      newFrm.resizeTo(x,y);
+    }
+  -->
+  </script>
+  <input type="button" value="stop" onclick="clearInterval(intervalID);newFrm.close();">
+</body>
+</html>
