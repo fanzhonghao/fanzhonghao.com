@@ -1,0 +1,155 @@
+<!--
+  Author:fan
+  Date:2017.7.30
+  Description:
+    This code is used to design a
+  slidable sidebar.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sidebar</title>
+  <meta charset="utf-8">
+  <meta name="description" content="sidebar">
+  <style>
+    *{
+      margin: 0;/*清除外边距*/
+      padding: 0;/*清除内边距*/
+    }
+    li{
+      list-style: none;/*清除默认小圆点*/
+    }
+    #sidebar{
+      width: 230px;
+      //height: 500px;
+      background: #99ff66;
+    }
+    a{
+      text-decoration: none;/*清除默认下划线*/
+      color: #fff;
+    }
+    #sidebar>ul>li{
+      position:relative;/*定位，父类*/
+      width: 230px;
+      background: #222d32;
+      color: #fff;/*文本颜色*/
+    }
+    #sidebar>ul>li>a{
+      display: block;
+      padding: 12px 5px 12px 35px;
+      /*边框线 粗细 样式*/
+      border-left: 3px solid transprent;//颜色透明 dotted 为点状,solid为线状
+      //background: red;
+    }
+    #sidebar>ul>li:hover>a{//鼠标移动到此处时，改变
+      background: #1e282c;
+      border-left: 3px solid #00ffff;
+      color: #fff;
+    }
+    #sidebar ul.menu>li>a{
+      width: 227px;
+      height: 30px;
+      display: block;
+      background: #368;
+      border-left: 3px solid transparent;
+      text-align: center;
+    }
+    #sidebar ul.menu>li:hover>a{
+      border-left-color: #fff;
+      color: #000;/*字体颜色*/
+    }
+    #sidebar ul.menu{
+      display: none;
+    }
+    #sidebar ul li::after{
+      position: absolute;
+      top: 16px;
+      left: 10px;
+      content: '';/*激活伪元素*/
+      display: block;
+      border: 8px solid transparent;
+      border-left-color: #fff;
+
+      /*border-top-color: green;
+      border-right-color: #fff;
+      background: red;*/
+      /*  width: 10px;
+        height: 10px;*/
+    }
+    #sidebar>ul>li.on::after{
+      border-top-color: #fff;
+      border: 8px solid transparent;
+    }
+  </style>
+</head>
+<body bgcolor='black'>
+  <div id='sidebar'>
+    <ul>
+      <li><a href="javascript:;">Main sidebar</a>
+        <ul class="menu">
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">Main sidebar</a>
+        <ul class="menu">
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">Main sidebar</a>
+        <ul class="menu">
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">Main sidebar</a>
+        <ul class="menu">
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">Main sidebar</a>
+        <ul class="menu">
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">Main sidebar</a>
+        <ul class="menu">
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+          <li><a href="javascript:;">Dash</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script><!--引入jquery插件-->
+  <script>//部分功能直接有jquery实现
+    $('#sidebar>ul>li').click(function(){
+      $(this).toggleClass('on').find('ul.menu').slideToggle().parents('li').siblings('li').removeClass('on').find('ul.menu').slideUp();
+    })
+  </script>
+  <!--
+    $(this).toggleClass('on')
+    被点击的这个li，如果有on类名就清除on类名，如果没有就加上
+    find('ul.menu').slideToggle()
+    找到他下面的类名为menu的ul标签，让他展开或者收缩
+    parents('li').siblings('li')
+    找到menu的父亲，是li的父亲，找到他的兄弟元素，让所有的兄弟元素都移除on类名
+    find('ul.menu').slideUp()
+    找到这些li里面的ul，让他们全部收缩
+  -->
+</body>
+</html>
