@@ -1,0 +1,30 @@
+<!--
+  Author:fan
+  Date:2017.8.2
+  Description:
+    This code is used to express thee use
+  of MimeType object.
+-->
+<html>
+<head>
+  <title>MimeType</title>
+</head>
+<body>
+  <script>
+  <!--
+    var count = navigator.mimeTypes.countgth;//获取MIME数量
+    with(document){//改变上下文对象
+      write("当前浏览器共支持" + count + "种MIME类型：");
+      write("<TABLE BORDER>");//输出表格
+      write("<CAPTION>MIME type清单</CAPTION>")//输出标题
+      write("<TR><TH> <TH>名称 <TH>描述 <TH>扩展名 <TH>附注")
+      for (var i = 0; i < count; i++) {
+        write("<TR><TD>" + i + "<TD>" + navigator.mimeTypes[i].type +
+      "<TD>" + navigator.mimeTypes[i].description + "<TD>" + navigator.mimeTypes[i].suffixes + "<TD>"
+      + navigator.mimeTypes[i].enabledPlugin.name);//输出插件名
+    }
+  }
+  -->
+  </script>
+  </body>
+  </html>

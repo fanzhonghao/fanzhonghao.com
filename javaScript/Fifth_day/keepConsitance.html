@@ -1,0 +1,23 @@
+<!--
+  Author:fan
+  Date:2017.8.2
+  Description：
+    This code is used to express
+  keep two text consitent.
+-->
+<html>
+<head>
+  <title>Keep consitence</title>
+</head>
+<body>
+  <p>
+    <form name="first" >
+      Textarea1:
+      <input type="text" onkeypress="document.second.elements[0].value=this.value;" value="input">
+    </form>
+    <form name="second">
+      Textarea2:
+      <input type="text" onkeypress="document.first.elements[0].value=this.value;" value="input">
+    </form>
+</body>
+</html>
