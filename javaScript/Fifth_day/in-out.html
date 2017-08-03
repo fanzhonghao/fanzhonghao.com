@@ -1,0 +1,41 @@
+<!--
+	Date:2017.8.3
+	Description:
+		This code is used to show how
+	to cite the document's object.
+-->
+<html>
+<head>
+<title>Cite</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function msg() {
+			for(i = 0;i < document.forms[1].length-1;i++){
+				document.forms[0].showMsg.value += document.forms[1].elements[i].value + "\n";
+			}
+			alert(forms[0].showMsg.value);//?
+		}
+	</script>
+	<form>
+		<p>Show personal information</p>
+		<p>
+			<textarea name="showMsg" cols="40" rows="8">
+			</textarea>
+		</p>
+	</form>
+	<form name="form1" method="post" action="">
+		personal information<br>
+		Name: <input type="text" name="Name">
+		<p>
+		Sex: <input type="text" name="sex">
+		</p>
+		<p>
+		NO:	<input type="text" name="num">
+		<label>
+			<input type="submit" name="Submit" value="submit" onclick="msg()">
+		</label>
+		</p>
+	</form>
+</body>
+</html>

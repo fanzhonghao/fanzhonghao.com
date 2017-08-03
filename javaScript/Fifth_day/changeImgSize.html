@@ -1,0 +1,37 @@
+<!--
+  Author:fan
+  Date:2017.8.3
+  Descript:
+    This code is used to show
+  change the image's size
+  automaticaly.
+-->
+<html>
+<head>
+  <title>Change image size</title>
+</head>
+<body>
+  <script>
+  var n = 2;
+  var r = 1;
+  var control = true;
+  function warp(){
+    if(control == true) n++;
+    else n--;
+    if(n == 200) control=false;
+    if(n == 1) control=true;
+    if(control == true){
+      pic.width = pic.width+1;
+      pic.height=pic.height+1;
+    }else {
+      pic.width = pic.width-1;
+      pic.height = pic.height-1;
+    }
+  }
+  setInterval("warp()",30);
+  </script>
+</head>
+<body>
+  <img src="../First_project/image/1.jpg" name="pic">
+</body>
+</html>

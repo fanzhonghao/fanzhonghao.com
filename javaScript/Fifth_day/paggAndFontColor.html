@@ -1,0 +1,32 @@
+<!--
+	Date:2017.8.3
+	Description:
+		This code is used to show
+	how to use js to change page
+	and font's color.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color</title>
+</head>
+<body>
+<script type="text/javascript">
+	document.bgColor="black";
+	document.fgColor="white";//font's color
+	function changeColor() {
+		document.bgColor="";
+		document.boby.text="blue";//font's color
+	}
+	function outColor(){
+		document.bgColor="pink";
+		document.body.text="white";
+	}
+</script>
+<h1 onmousemove="changeColor()" onmouseout="outColor()">玉楼春</h1>
+<p onmouseover="changeColor()" onmouseout="outColor()">晚妆初了明肌雪，春殿嫔娥鱼贯列。</p>
+<p onmouseover="changeColor()" onmouseout="outColor()">凤箫吹断水云间，重按霓裳歌遍彻。</p>
+<p onmouseover="changeColor()" onmouseout="outColor()">临春谁更飘香屑？醉拍阑干情味切。</p>
+<p onmouseover="changeColor()" onmouseout="outColor()">归时休放烛光红，待踏马蹄清夜月。</p>
+</body>
+</html>

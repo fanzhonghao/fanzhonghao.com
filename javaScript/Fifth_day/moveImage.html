@@ -1,0 +1,38 @@
+<!--
+  Author:fan
+  Date:2017.8.3
+  Description:
+    This code is used to show
+  move the picture automatically.
+-->
+<html>
+<head>
+  <title>Move picture</title>
+</head>
+<body onload="setInterval('move()',100)">
+  <script>
+  var v = 120;
+  var h = 0;
+  var i = 0;
+  var k = 1;
+  function move() {
+    pic.vspace = v;
+    pic.hspace = h;
+    i++;
+    if(i % 20 == 0)k++;
+    if(k % 2 == 0){
+      pic.src = "../First_project/image/1.jpg";
+    }else {
+      pic.src = "../First_project/image/2.jpg";
+    }
+    if(i > 400){
+      h -= 2;
+    }else {
+      h += 2;
+    }
+    if(i == 800) i = 1;
+  }
+  </script>
+  <img src="../First_project/image/1.jpg" vspace=1 hspace=100 name="pic" height="100">
+</body>
+</html>

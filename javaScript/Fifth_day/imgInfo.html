@@ -1,0 +1,39 @@
+<!--
+  Date:2017.8.3
+  Description:
+    This code is used to show
+  the image's information.
+-->
+<html>
+<head>
+  <title>Image information</title>
+</head>
+<body>
+  <script>
+  function showProps(pic){
+    var str = "Image Properties\n\n";
+    str += "alt: " + pic.alt + "\n";
+    str += "border: " + pic.border + "\n";//边框信息
+    str += "complete: " + pic.complete + "\n";//图片是否载入信息
+    str += "height: " + pic.height + "\n";
+    str += "hspace: " + pic.hspace + "\n";//水平侧空白
+    str += "lowsrc: " + pic.lowsrc + "\n";
+    str += "name: " + pic.name + "\n";
+    str += "src: " + pic.src + "\n";
+    str += "vspace: " + pic.vspace + "\n";
+    str += "width: " + pic.width + "\n";
+    alert(str);
+  }
+  </script>
+  <center>
+    <h1>访问图像属性</h1>
+    <img src="../First_project/image/1.jpg" alt="The image" lowsrc="../First_project/image/1.jpg"
+    id="testimage" name="testimage" width="200" height="150" border="1" hspace="10" vspace="15">
+    <br><br>
+    <form action="#" method="get">
+      <input type="button" value="显示属性" onclick="showProps(document.images['testimage']);">
+      <input type="button" value="替换图像" onclick="document.testimage.src='../First_project/image/2.jpg';"><p>
+      <input type="button" value="重新载入原图像" onclick="document.testimage.src='../First_project/image/1.jpg';">
+    </form>
+  </body>
+  </html>

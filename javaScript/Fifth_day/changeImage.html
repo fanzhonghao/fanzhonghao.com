@@ -1,0 +1,30 @@
+<!--
+  Author:fan
+  Date:2017.8.3
+  Description:
+    This code is used to show how to
+  change the image.
+-->
+<html>
+<head>
+  <title>Change image</title>
+</head>
+<body bgcolor=black>
+  <script>
+  i = 0;
+  function picChange(){
+    i++;
+    if (i==2) {
+      pic.src="../First_project/image/1.jpg";
+      i = 0;
+    }else {
+      pic.src="../First_project/image/2.jpg";
+    }
+  }
+  setInterval("picChange()",1000);//1s调用一次
+  </script>
+  <div align="center">
+    <p><img src="../First_project/image/2.jpg" width="400" height="280" name="pic"></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+	Author:fan
+	Date:2017.8.3
+	Description:
+		This code is used to show cite
+	the document's daughter element by
+	create a select all button.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select all</title>
+</head>
+<body>
+<script type="text/javascript">
+	function selectAll() {
+		//用getElementById获取select1元素的结点，同时用child.length获取子元素个数
+		for (var i = 0; i < document.getElementById("select1").children.length; i++) {
+			var obj = document.getElementById("select1").children[i];//将子元素放在obj中，并修改它的checked状态
+			if(obj && obj.type && obj.type == "checkbox")//取得用户选择的值
+				obj.checked = true;//设置为被选中状态
+		}
+	}
+</script>
+<table border= 1 cellpadding="0" cellspacing="0" width="300">
+	<tr>
+		<td id = "select1">
+			<input type="button" value="check all" onclick="selectAll()"> <br>
+			<input type="checkbox"> 1 <br>
+			<input type="checkbox"> 2 <br>
+			<input type="checkbox"> 3 <br>
+			<input type="checkbox"> 4 <br>
+			<input type="checkbox"> 5 <br>
+			<input type="checkbox"> 6 <br>
+			<input type="checkbox"> 7 <br>
+		</td>
+	</tr>
+	<tr>
+		<td id = "select2">
+		<p>
+			<input type="checkbox"> 8 <br>
+			<input type="checkbox"> 9 <br>
+		</p>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

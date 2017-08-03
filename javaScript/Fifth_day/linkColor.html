@@ -1,0 +1,24 @@
+<!--
+	Author:fan
+	Date:2017.8.3
+	Description:
+		This code is used to 
+	show how to change the link's
+	color.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Link Color</title>
+</head>
+<body>
+<script type="text/javascript">
+	function setColor() {
+		document.vlinkColor="blue";//Didn't be visited
+		document.linkColor="green";//Has been visited
+		document.alinkColor="red";//Being visiting
+	}
+</script>
+<a href="http://www.baidu.com" onmousemove="setColor()">bai du</a>
+</body>
+</html>

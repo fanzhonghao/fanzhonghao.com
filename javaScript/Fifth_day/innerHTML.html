@@ -1,0 +1,20 @@
+<!--
+	Date:2017.8.3
+	Description:
+		This code is used to show the
+	use of innerHTML.
+-->
+<html>
+<head>
+<title>innerHTML</title>
+<script type="text/javascript">
+	function getValue(){
+		var x=document.getElementById("myHeader");
+		alert(x.innerHTML);//innerHTML can get all coontent from the object's beging to it's end
+	}
+</script>
+</head>
+<body>
+	<h1 id="myHeader" onclick="getValue()">Click Here</h1>
+</body>
+</html>
