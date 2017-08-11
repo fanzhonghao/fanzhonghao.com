@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+    <title>register</title>
+    <style type="text/css">
+        input:focus{  outline:1px; solid-color: red}
+    </style>
+    <link href="reigster.css" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="gray">
+<script>
+    window.onload=function () {
+        var account=document.getElementById('account');//获得提示文字的引用
+        var notice=document.getElementsByClassName('notice');//账号控件获得焦点的时候触发事件
+        notice[1].style.display="none";//一开始不显示
+
+        account.onfocus=function () {
+            notice[0].style.display="block";//获得焦点时，提示文字变为显示状态
+        }
+        account.onblur=function () {
+            //失去焦点时，提示文字变为隐藏状态
+            notice[0].style.display="none"
+        }
+
+        var password=document.getElementById('password2');
+        password2.onfocus=function () {
+            notice[1].style.display="block";
+        }
+        password2.onblur=function () {
+            notice[1].style.display="none";
+        }
+    }
+</script>
+<div class="bg">
+
+</div>
+<div class="bgv">
+    <form action="" method="post">
+        <fieldset><!-- 将表单分为三个字段组 -->
+
+            <legend>账号信息</legend>
+            <div class="left">
+                <label for="account">账号：</label><!-- for属性规定label与哪个表单绑定 -->
+            </div>
+            <div class="right">
+                <input type="text" name="my_account" id="account" autofocus="true" placeholder="请输入账号">  <!-- 自动聚焦 -->
+                <div class="notice">请输入8位长度的字符串可包括数字、大小写字母，不能输入符号！</div>
+            </div>
+
+            <div class="left">
+                <label for="password">密码：</label>
+            </div>
+            <div class="right">
+                <input type="password" name="my_password" id="password" placeholder="请输入密码">
+            </div>
+
+            <div class="left">
+                <label for="password">再次输入密码：</label>
+            </div>
+            <div class="right">
+                <input type="password" name="my_password2" id="password2" placeholder="请再次输入密码">
+                <div class="notice">密码关系到您的账户安全，请记住您的密码并保持两次密码输入一致!</div>   <!-- 没有焦点时，信息未隐藏-->
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>个人信息</legend>
+            <div class="left">
+                <label for="name">姓名：</label>
+            </div>
+            <div class="right">
+                <input type="text" name="my_name" id="name">
+            </div>
+
+            <div class="left">
+                <label for="age">年龄：</label>
+            </div>
+            <div class="right">
+                <input type="number" name="my_age" id="age" min="0" max="99">
+            </div>
+
+            <div class="left">
+                <label for="date">出生日期：</label>
+            </div>
+            <div class="right">
+                <input type="date" name="my_date" id="date">
+            </div>
+
+            <div class="left">
+                <label>性别：</label>
+            </div>
+            <div class="right">
+                <label>男：<input type="radio" name="my_sex" value="boy"></label>
+                <label>女：<input type="radio" name="my_sex" value="girt"></label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>联系方式</legend>
+            <div class="left">
+                <label for="tel">手机号码：</label>
+            </div>
+            <div class="right">
+                <input type="tel" name="my_tel" id="tel">
+            </div>
+
+            <div class="left">
+                <label for="email">电子邮件：</label>
+            </div>
+            <div class="right">
+                <input type="email" name="my_email" id="email">
+            </div>
+        </fieldset>
+    </form>
+    <input type="submit" name="my_submit" value="提交">
+</div>
+</body>
+</html>
