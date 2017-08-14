@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        检测输入是否合法
+    </title>
+</head>
+<body>
+<script>
+    function check() {
+        var  username = document.getElementsByName("username");
+        var use = username[0].value;
+        var regx = /[a-z0-9]\w\d/g;
+        if(!regx.test(use)){
+            alert("\n用户名检测：\n\n结果：用户名不合法！\n");
+            use.focus();//获得焦点
+        }else {
+            alert("\n用户名检测：\n\n结果：用户名合法！\n");
+        }
+    }
+</script>
+<center>
+    <p>
+        用户名合法性检测程序
+    </p>
+    <p>
+        规则：数字或英文字符串+数字
+    </p>
+    <input type="text" name="username" value="">
+    <input type="submit" value="合法性检测" onclick="check()">
+</center>
+</body>
+</html>

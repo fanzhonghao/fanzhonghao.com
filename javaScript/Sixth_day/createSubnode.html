@@ -1,0 +1,45 @@
+<!--
+    Author:fan
+    Date:2017.8.14
+    Description:
+        This code is used to show
+    how to create a sub node.
+    Attention:
+        There has a wrong.
+-->
+<html>
+<head>
+    <title>
+        创建新节点
+    </title>
+    <script>
+        function create() {
+            for(;;){
+                var url = prompt("请输入图片的URL地址：","../First_project/image/1.jpg");
+                if(url != null){
+                    //alert("1");
+                    try{
+                        var docBody = document.getElementById("DocBody");
+                        var imgObj;
+
+                        imgObj = document.createElement("<img>");//创建一个IMG节点对象     未知错误
+
+                        alert("1");
+                        imgObj.src = url;
+                        docBody.appendChild(imgObj);//为图片节点对象添加子节点
+
+                    }catch (e){
+                        alert("程序发生错误：" + e.message);
+                    }
+                }else {
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body id="DocBody" onload="create()">
+<img src="../First_project/image/1.jpg">
+
+</body>
+</html>

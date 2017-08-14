@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>测试正则表达式</title>
+</head>
+<body>
+<script>
+    var filter = /爆头/g;//g表示搜索整个字符串
+    var said = "一枪爆头";
+    if(filter.test(said)){
+        alert("该语句中有限制词汇");
+    }else {
+        alert(said);
+    }
+
+    function test1() {
+        var reg = /.o./g; //寻找字符o前后接任意字符组成的有三个字符的字符串
+        var str = "How are you?";
+        var result = new Array();
+        while (reg.exec(str)){//执行匹配操作，如果找到匹配则继续找下一项
+            result.push(RegExp.lastMatch);//添加结果
+
+        }
+        alert(result);
+    }
+
+    function test2() {
+        var showStr="";
+        var str = "this word is OKOKOKOKokokokok!!!"
+        var searchStr = /(OK){2}/gi;//查找整个字符串，大小写忽略，OK重复两次
+        var result = str.match(searchStr);//查找匹配
+        for (var i = 0;i < result.length;i++){
+            showStr += result[i] + "\n";
+        }
+        alert("一共有" + result.length + "组匹配\n" + showStr);
+    }
+
+    function test3() {
+        var str1 = "I like red and black";
+        var str2 = "she likes red";
+        var result = /(red|black)/;//候选正则表达式
+        reStr = result.test(str1);
+        alert(result.test(str2));
+        alert(reStr);
+    }
+
+    function test4() {//在句中查找distance和discover两个单词
+        var str="we want to search for the words:discover and discount";
+        var regex = /dis?(cover|count)/g;//也可以为 /discover|discount/g;
+
+        var array = regex.exec(str);//第一次匹配
+        var msg = "字符所在位置是:\t";
+
+        if(array){
+            msg += array.index + "\t";
+        }
+        array=regex.exec(str);//第二次匹配
+        if(array){
+            msg += array.index + "\t";
+        }
+        alert(msg);
+    }
+</script>
+<input type="button" onclick="test1()" value="test1">
+<input type="button" onclick="test2()" value="test2">
+<input type="button" onclick="test3()" value="test3">
+<input type="button" onclick="test4()" value="test4">
+</body>
+</html>

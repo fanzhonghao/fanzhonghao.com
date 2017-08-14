@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>cookie的生存期</title>
+</head>
+<body>
+cookie名：
+<input type="text" name="Name" id="Name" autofocus>
+<br>
+cookie值：
+<input type="text" name="Value" id="Value">
+<br>
+cookie时间：
+<select name="Time" size="1">
+    <option value="1">一天</option>
+    <option value="2">二天</option>
+    <option value="3">三天</option>
+    <option value="4">四天</option>
+    <option value="5">五天</option>
+    <option value="6">六天</option>
+    <option value="7">七天</option>
+    <option value="8">八天</option>
+</select>
+<script>
+    function setCookie() {
+        var Time = document.getElementsByName('Time');
+        n=Time[0].value;
+
+        var name = Name.value;
+        var psd = Value.value;
+
+        if(name != ""){
+            var date=new Date();//获取当前时间
+            var expireDays=n*24*3600*1000;
+            date.setTime(date.getTime() + expireDays);
+            document.cookie=name+"=;"+escape(psd)+";expire="+date.toGMTString();
+            alert("设置成功！时间为：" + expireDays + "秒");
+        }else {
+            alert("设置失败，cookie名不能为空");
+        }
+    }
+</script>
+<input type="submit" name="Submit" value="设置cookie" onclick="setCookie()">
+</body>
+</html>

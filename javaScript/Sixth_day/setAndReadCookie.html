@@ -1,0 +1,120 @@
+<!--
+    Author:fan
+    Date:2017.8.14
+    Description:
+        This code is used to
+    show how to set and get
+    the cookie.
+
+    Attention:
+        There has a wrong that
+    I don't understand now which
+    is I can't get the cookie's
+    value.
+        And why document.getElementById
+    is useful while document.getElementsByName
+    isn't.
+        Answer: When use document.getElementsByName,
+    the value it return is a array that we should
+    use by the way the we use array.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>cookie编码解码</title>
+</head>
+<body>
+<script>
+    function SetCookie(name,value) {
+        window.document.cookie=name + "=" + escape(value) + ";";//设置cookie
+
+        var cookieString =  document.cookie;//获取cookie
+        alert(cookieString);/*未知，未获取到cookie值*/
+
+        alert("设置成功");
+    }
+    function GetCookie(cookieName,codeFind) {
+       // alert("cookieName:" + cookieName + "\n" + "codeFind:" + codeFind);
+        var cookieString =  document.cookie;//获取cookie
+        alert(cookieString);   /*未知，未获取到cookie值*/
+
+        var start = cookieString.indexOf(cookieName + '=');//截取cookie的名
+
+        if(start == -1)//不存在该名的cookie
+        {
+
+            return null;
+        }
+
+        start += cookieName.length + 1;
+
+
+        var end = cookieString.indexOf(';',start);//取得cookie值
+        if(codeFind == 1){
+            if(end == -1)//防止最后没有加“；”冒号的情况
+                return unescape(cookieString.substring(start));//返回编码后的值
+            return unescape(cookieString.substring(start,end));
+        }else {
+            //当用户以非解码的方式查看时
+            if(end == -1)
+                return cookieString.substring(start);
+            return cookieString.substring(start,end);
+        }
+    }
+    function setValue() {
+
+        var Name = document.getElementById('Name');
+        var Value = document.getElementById('Value');
+
+        if(Name.value != "")//输入的文本不为空
+        {
+            //获取输入信息并调用函数设置cookie
+            SetCookie(Name.value,Value.value);
+            Value.value = "";
+            Name.value = "";//将文本框清空
+            Name.focus();//再次聚焦
+        }else {
+            alert("设置失败，cookie的名不能为空")
+        }
+    }
+    function getValue(n) {
+
+        var Name = document.getElementById('Name');
+        var Value = document.getElementById('Value');
+
+        if(Name.value == ""){
+            alert("您没有输入要查找的cookie名");
+        }else {
+            //alert(Name.value);
+            var str = GetCookie(Name.value,n);
+            if(str!=""){
+                Value.value=str;
+            }else {
+                Value.value="该值为空";
+            }
+        }
+    }
+</script>
+<label>
+    cookie名：
+    <input type="text" name="Name" id="Name" autofocus>
+</label>
+<label>
+    <br>
+    <br>
+    cookie值：
+    <input type="text" name="Value" id="Value">
+</label>
+<p>
+    <label>
+        <input type="submit" name="Submit" value="设置cookie" onclick="setValue()">
+    </label>
+    <label>
+        <input type="submit" name="Submit2" value="查询cookie" onclick="getValue(1)">
+    </label>
+    <label>
+        <input type="submit" name="Submit3" value="非解码查询" onclick="getValue(0)">
+    </label>
+</p>
+</body>
+</html>

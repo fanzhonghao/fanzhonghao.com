@@ -1,0 +1,40 @@
+<!--
+    Author:fan
+    Date:2017.8.15
+    Description:
+        This code is used to let
+    user put in a domain name
+    which is end with com and
+    judge whether it is right.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>判断域名合法性</title>
+</head>
+<body>
+<script>
+    function test(obj) {
+        var msg="";
+        var str = obj.m_num.value;
+        var regex = /(?=com)/;//此为正向，?!=com为负向
+        if(!regex.exec(str)){
+            msg+="您输入的格式不正确";
+            alert(msg);
+            obj.m_num.focus();
+        }else {
+            msg += "输入的格式正确";
+            alert(msg);
+            return true;
+        }
+    }
+</script>
+<center>
+    <p>请输入以com结尾的域名</p>
+    <form onsubmit="return test(this);">
+        <input type="text" name="m_num" autofocus>
+        <input type="submit" value="确定">
+    </form>
+</center>
+</body>
+</html>
