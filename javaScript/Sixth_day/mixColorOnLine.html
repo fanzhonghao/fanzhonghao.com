@@ -1,0 +1,28 @@
+<html>
+<meta charset="utf-8">
+<title>网页调色板</title>
+<script>
+    function colorChange() {
+        document.fgColor = document.myForm.fgColors.value;
+        document.bgColor = document.myForm.bgColors.value;
+    }
+</script>
+<body>
+<form name="myForm">
+    <h1 align="center">WinRar</h1>&nbsp;&nbsp;&nbsp;&nbsp;
+    <p>
+        <strong>WinRaR</strong>是<strong>32位Windows版本的RAR压缩文件管理器</strong>
+    一个允许你创建、管理和控制压缩文件的强大工具。
+    </p>
+    <p>
+        文字颜色：
+        <input type="text" value="#ffffff" name="fgColors">
+        <br>
+        背景颜色：
+        <input type="text" value="#000000" name="bgColors">
+        <br>
+        <input type="button" value="调色" onclick="colorChange()">
+    </p>
+</form>
+</body>
+</html>

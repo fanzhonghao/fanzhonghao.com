@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        自动选择文本框文字
+    </title>
+</head>
+<body onload="Select()">
+<script>
+    function Select() {
+        form1.text.focus();//文本框获得焦点
+        form1.text.select();//文本框的文字被选中
+    }
+</script>
+<form id="form1" name="form1" method="post" action="">
+    <label>
+        <input type="text" name="text" value="Hello" onmouseover="this.value='';">
+    </label>
+</form>
+</body>
+</html>
