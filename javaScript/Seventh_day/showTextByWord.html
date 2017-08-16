@@ -1,0 +1,83 @@
+<!--
+    Author:fan
+    Date:2017.8.16
+    Description:
+        This code is used to show
+    how to show text by word.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>逐字显示</title>
+    <script>
+        var i = 0;
+        //var set = setInterval("show",1000);
+        function show() {
+            var poemName = "静夜思";
+            var poemAuthor = "李白";
+            var poem = new Array();
+            poem[0] = "窗前明月光，";
+            poem[1] = "疑似地上霜。";
+            poem[2] = "举头望明月，";
+            poem[3] = "低头思故乡。";
+            if(i < 3 )document.getElementById("poem").innerHTML = poemName.substring(0,i+1);
+            i = i + 1;
+            /*setInterval("function()",time)表示无限循环*/
+            setTimeout("show()", 1000);//只执行一次
+
+            if(i==3){
+                document.getElementById("poem").innerHTML = poemName.substring(0,i) + "<br>";
+            }
+            if(i == 4){
+                document.getElementById("author").innerHTML = poemAuthor.substring(0,1) + "<br>";
+            }
+            if(i == 5){
+                document.getElementById("author").innerHTML = poemAuthor.substring(0,2) + "<br>";
+            }
+            if(i == 6){
+                document.getElementById("content").innerHTML += poem[0] + "<br>";
+            }
+            if(i == 7){
+                document.getElementById("content").innerHTML += poem[1] + "<br>";
+            }
+            if(i == 8){
+                document.getElementById("content").innerHTML += poem[2] + "<br>";
+            }
+            if(i == 9){
+                document.getElementById("content").innerHTML += poem[3] + "<br>";
+            }
+
+        }
+    </script>
+    <style type="text/css">
+        #poem{
+            padding-top: 20px;
+            text-align: center;
+            font-size: x-large;
+        }
+        #author{
+            text-align: center;
+            margin-top: 20px;
+            font-size: large;
+        }
+        #content{
+            text-align: center;
+            margin-top: 20px;
+            font-size: large;
+        }
+        #box{
+            width: 60%;
+            height: 500px;
+            margin: 50px 20% 0 20% ;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body  onload="show()">
+<div id="box">
+    <div id="poem"></div>
+    <div id="author"></div>
+    <div id="content"></div>
+</div>
+</body>
+</html>

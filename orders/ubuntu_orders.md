@@ -80,3 +80,5 @@ The last modification time : 2017.06.01
 > This order is used to configure x
 
 Final, thank you for <font color = blue>__gaojie's__</font> help
+
+we can use find、 awk and grep to find some information which can be selected.
