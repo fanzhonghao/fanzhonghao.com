@@ -44,6 +44,7 @@
  */
 import java.util.Date;
 import java.util.Formatter;
+
 public class timeFormat{
   public static void main(String[] args) {
     Formatter fmt = new Formatter(System.out);//创建一个Formatter类的对象

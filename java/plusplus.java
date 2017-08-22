@@ -1,6 +1,4 @@
-/*
-    Attention
-*/
+
 public class plusplus{
   public static void main(String[] args) {
     int j = 0;

@@ -1,5 +1,5 @@
 The last modification time : 2017.06.01
-** Some orders for ubuntu**
+** Some orders for ubuntu **
 
 + sudo apt_get install python3-mysqldb
 > This order can be used to install python3-mysqldb, you can also use it to install others
