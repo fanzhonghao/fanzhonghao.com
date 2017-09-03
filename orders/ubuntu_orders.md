@@ -88,4 +88,4 @@ You can just use a order to complete it likes follow:
 * ` sudo pppoeconf `
 
 And then you can enter yourname and password.  
-After this, you can use `pon dsl-provider` to connect and use `poff dsl-provider` to interrupt.
+After this, you can use `sudo pon dsl-provider` to connect and use `sudo poff dsl-provider` to interrupt.
