@@ -84,7 +84,7 @@ Final, thank you for <font color = blue>__gaojie's__</font> help
 we can use find、 awk and grep to find some information which can be selected.
 
 ### about connect to the internet with the wire
-You can just use a order to complete it likes follow:  
+You can just use an order to complete it likes the follow:  
 * ` sudo pppoeconf `
 
 And then you can enter yourname and password.  
