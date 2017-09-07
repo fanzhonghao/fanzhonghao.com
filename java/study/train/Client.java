@@ -34,7 +34,7 @@ class send implements Runnable{
             }
             //实现客户端单向向服务端通信部分
 */
-            //实现客户端向服务端双向通话，但只能一人说一句
+            //实现客户端向服务端双向通话，但只能每人轮流说一句
             String data,data1;
             while (true){
                 data = input.nextLine();

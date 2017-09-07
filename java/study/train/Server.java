@@ -8,7 +8,6 @@ import java.util.Scanner;
  * Date: 17-9-7
  * Time: 下午7:28
  * Description:
- *      支持客户端向服务端通信
  */
 public class Server implements Runnable {
     private int port;
@@ -35,7 +34,7 @@ public class Server implements Runnable {
             //以上为实现客户端向服务端单向通信部分
 */
 
-            //实现客户端向服务端双向通话，但只能一人说一句
+            //实现客户端向服务端双向通话，但只能每人轮流说一句
             Scanner enter = new Scanner(System.in);
 
             while (true){
