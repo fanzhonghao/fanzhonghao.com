@@ -13,7 +13,7 @@ class send implements Runnable{
     private String server;//服务器地址
     public send(){
         port = 2017;
-        server = "localhost";
+        server = "47.94.212.99";
     }
 
     @Override
