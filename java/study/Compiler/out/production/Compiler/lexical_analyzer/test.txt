@@ -1,0 +1,9 @@
+origin is (360,240);
+rot is PI/2;
+scale is (100,100/3);
+for t from 0 to 2*PI step PI/50 draw(cos(t),sin(t));
+//origin is ();
+origin is (200,240);
+rot is pi/2;
+scale is (100/3,100);
+for t from 0 to 2*pi step pi/50 draw(sin(t),cos(t));

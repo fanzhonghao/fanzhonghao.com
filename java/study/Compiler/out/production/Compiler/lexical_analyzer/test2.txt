@@ -1,0 +1,1 @@
+for t from 0*9 to 200*2 step 1+2 draw(t,t); 
