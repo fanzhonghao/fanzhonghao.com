@@ -10,18 +10,16 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Time: 下午6:03
  * Description:
  */
-public class usedclass {//得到符号表
+public class usedclass {//通过词法分析，得到符号表
     Token_Table token_table = new Token_Table();
     Token token;
     private String string = new String();
     private BlockingQueue<Token> queue = new LinkedBlockingQueue<Token>(1000);
 
     public BlockingQueue<Token> lexi_ana(String string1){//输出匹配的符号表
-//        String test = new String();
         File file = new File(string1);
         Reader reader = null;
         int c;
-//        int string_len;
         try {
             reader = new InputStreamReader(new FileInputStream(file));
             while ((c = reader.read()) != -1){

@@ -34,7 +34,7 @@ public class Main_used {//使用函数
         split_txt.writeTo();
 
         //
-        colorList.add(new colorClass(0,"BLACK"));
+//        colorList.add(new colorClass(0,"BLACK"));
         //
         for (;split_txt.readFile() != "";){
             String string = split_txt.readFile();
@@ -332,7 +332,7 @@ public class Main_used {//使用函数
         //
 
         //
-        new drawPoint().draw(pointList);
+        new drawPoint().draw(pointList,colorList);
     }
     public Main_used(){
         sca_a = 1;

@@ -298,7 +298,7 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
     private LinkedList testSetColorPattern(LinkedList linkedList){
         Token token;
         int flag = 0;
-        String[] color = {"RED","YELLOW","BLUE","GREEN","BLACE"};
+        String[] color = {"RED","YELLOW","BLUE","GREEN","BLACK"};
         if (((Token) linkedList.get(1)).getOriinpt() != "("){
             System.out.println("语法错误-");
             System.exit(-1);
@@ -310,10 +310,13 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
         for (;flag < 5;flag++){
             if (token.getOriinpt().equalsIgnoreCase(color[flag])) break;
         }
-        if (flag == 5) {
+        if (flag == 5 && !token.getOriinpt().equalsIgnoreCase(color[4])){
+            System.out.println(token.getOriinpt());
             System.out.println("语法错误---");
             System.exit(-1);
         }
+
+
         return linkedList;
     }
     //
