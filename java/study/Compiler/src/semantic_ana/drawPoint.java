@@ -16,7 +16,7 @@ public class drawPoint extends JFrame{
     private Color rectColor = new Color(0xf5f5f5);
     public void draw(LinkedList linkedList){
         Container p = getContentPane();
-        setBounds(100,500,500,500);
+        setBounds(100,500,720,480);
         setVisible(true);
         p.setBackground(rectColor);
         setLayout(null);
@@ -36,9 +36,11 @@ public class drawPoint extends JFrame{
             int size = linkedList.size();
             for (int i = 0;i < size;i++){
                 pointClass point = (pointClass) linkedList.get(i);
-                g.drawLine((int)(point.getX()),(int)(point.getY()),(int)(point.getX()),(int)(point.getY()));
+//                g.drawLine((int)(point.getX()),(int)(point.getY()),(int)(point.getX()),(int)(point.getY()));
+//                  g.drawRect((int)(point.getX()),(int)(point.getY()),(int)(point.getX()),(int)(point.getY()));
+                  g.drawOval((int)(point.getX()),(int)(point.getY()),2,2);
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(1);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }

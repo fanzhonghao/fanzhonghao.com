@@ -16,6 +16,14 @@ public class Token_Type {//记录所有记号
             "CONST_ID",//常数
             "NONTOKEN",//空记号
             "COMMENT",//注释
+
+            "SETCOLOR",
+            "RED",
+            "BLUE",
+            "YELLOW",
+            "BLACK",
+            "GREEN",
+            //
             "ERRORTOKEN"//出错记号
     };
 

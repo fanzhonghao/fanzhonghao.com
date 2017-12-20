@@ -1,5 +1,7 @@
 package parser;
 
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+import com.sun.scenario.effect.impl.prism.PrImage;
 import lexical_analyzer.Token;
 import lexical_analyzer.Token_Table;
 import lexical_analyzer.usedclass;
@@ -50,6 +52,11 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
             case "for_pattern":
                 linkedList = testForPattern(linkedList);
                 break;//for模式
+            //
+            case "setcolor_pattern":
+                linkedList = testSetColorPattern(linkedList);
+                break;
+            //
         }
         //测试
 //        System.out.println("After test");//输出过滤函数结果
@@ -68,28 +75,28 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
     private LinkedList testOriinputPattern(LinkedList linkedList){//判定ori语法模式和scale语法模式正确性
         LinkedList linkedList1 = new LinkedList();
         if (linkedList.size() < 8) {
-            System.out.println("语法错误");
+            System.out.println("语法错误 analySentence_1");
             System.exit(-1);
         }
         Token token11 = (Token) linkedList.get(1);
         if (token11.getOriinpt() != "IS"){
-            System.out.println("语法错误");
+            System.out.println("语法错误 analySentence_2");
             System.exit(-1);
         }
         token11 = (Token) linkedList.get(2);
         if (token11.getOriinpt() != "("){
-            System.out.println("语法错误");
+            System.out.println("语法错误 analySentence_3");
             System.exit(-1);
         }
         token11 = (Token) linkedList.get(linkedList.size()-2);
         if (token11.getOriinpt() != ")"){
-            System.out.println("语法错误");
+            System.out.println("语法错误 analySentence_4");
             System.exit(-1);
         }
         int flag = 0;
         for (int i = 3;i < linkedList.size()-1;){//计算括号中的表达式                               //attention -1
             Token token1 =(Token) linkedList.get(i);
-            if (in_pattern(token1.getToken_type())){//属于正常状态
+            if (in_pattern(token1.getToken_type()) ){//属于正常状态
                 linkedList1.add(token1);
                 linkedList.remove(i);
             }else if (token1.getOriinpt() == ","){
@@ -100,11 +107,12 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
                 linkedList1.clear();
                 i += 2;//
             }else {
-                System.out.println("语法错误");
+
+                System.out.println("语法错误 analySentence_5");
                 System.exit(-1);
             }
             if (flag > 1){
-                System.out.println("语法错误");
+                System.out.println("语法错误 analySentence_6");
                 System.exit(-1);
             }
         }
@@ -119,12 +127,12 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
     private LinkedList testRotPattern(LinkedList linkedList){//匹配rot模式
         LinkedList linkedList1 = new LinkedList();
         if (linkedList.size() < 4){
-            System.out.println("语法错误");
+            System.out.println("语法错误 analySentence_7");
             System.exit(-1);
         }
         Token token =(Token) linkedList.get(1);
         if (token.getOriinpt() != "IS"){
-            System.out.println("语法错误");
+            System.out.println("语法错误 analySentence_8");
             System.exit(-1);
         }
         for (int i = 2;i < linkedList.size() - 1;){
@@ -133,7 +141,7 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
                 linkedList1.add(token1);
                 linkedList.remove(i);
             }else {
-                System.out.println("语法错误");
+                System.out.println("语法错误 analySentence_9");
                 System.exit(-1);
             }
         }
@@ -286,6 +294,29 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
         for (int i = 0;i < 8;i++)if (a.equalsIgnoreCase(patter[i])) return true;
         return false;
     }
+    //
+    private LinkedList testSetColorPattern(LinkedList linkedList){
+        Token token;
+        int flag = 0;
+        String[] color = {"RED","YELLOW","BLUE","GREEN","BLACE"};
+        if (((Token) linkedList.get(1)).getOriinpt() != "("){
+            System.out.println("语法错误-");
+            System.exit(-1);
+        }else if (((Token) linkedList.get(3)).getOriinpt() != ")"){
+            System.out.println("语法错误--");
+            System.exit(-1);
+        }
+        token =(Token) linkedList.get(2);
+        for (;flag < 5;flag++){
+            if (token.getOriinpt().equalsIgnoreCase(color[flag])) break;
+        }
+        if (flag == 5) {
+            System.out.println("语法错误---");
+            System.exit(-1);
+        }
+        return linkedList;
+    }
+    //
 //测试
 //    public static void main(String[] args) {
 //        BlockingQueue<Token> queue = new usedclass().lexi_ana("/home/fan/Compiler/src/lexical_analyzer/test2.txt");

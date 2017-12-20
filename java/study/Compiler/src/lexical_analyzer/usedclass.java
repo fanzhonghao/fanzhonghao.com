@@ -33,68 +33,6 @@ public class usedclass {//得到符号表
             e.printStackTrace();//
         }
 
-//        string_len = string.length();
-//
-//        for (int i = 0;i < string_len;i++)
-//        {
-//            if(Character.isLetter(string.charAt(i))){
-//                test += string.charAt(i);//得到连续字母字符串
-//                if (i < string_len - 1 && !Character.isLetter(string.charAt(i+1)))
-//                {
-//                    token = token_table.test(test);
-//                    queue.add(token);
-//                    test = "";
-//                }
-//            }
-//            else if (Character.isDigit(string.charAt(i))){//得到连续数字
-//                test += string.charAt(i);
-//                if (i < string_len - 1 && !Character.isDigit(string.charAt(i+1)))
-//                {
-//                    token = token_table.test(test);
-//                    queue.add(token);
-//                    test = "";
-//                }
-//            }
-//            else if (string.charAt(i) == '/'){//匹配 // 和 /
-//                test = "";
-//                if (i < string_len - 1 && string.charAt(i+1) == '/'){
-//                    token = token_table.test("//");
-//                    queue.add(token);
-//                    i ++;
-//                    for (;string.charAt(i) != '\n' && i < string_len-1;i++);
-//                }else {
-//                    token = token_table.test("/");
-//                    queue.add(token);
-//                }
-//            }
-//            else if (string.charAt(i) == '-'){//匹配 -- 和 -
-//                test = "";
-//                if (i < string_len - 1 && string.charAt(i+1) == '-'){
-//                    i++;
-//                    token = token_table.test("--");
-//                    queue.add(token);
-//                    for (;string.charAt(i) != '\n' && i < string_len - 1;i++);
-//                }else {
-//                    token = token_table.test("-");
-//                    queue.add(token);
-//                }
-//            }
-//            else if (string.charAt(i) == ';' || string.charAt(i) == '(' || string.charAt(i) == ')' || string.charAt(i) == ','
-//                    || string.charAt(i) == '+'){//匹配 ; ( ) , +
-//                test = "";
-//                token = token_table.test(String.valueOf(string.charAt(i)));
-//                queue.add(token);
-//            }
-//            else if (string.charAt(i) == '*'){//匹配 ** 和 *
-//                test = "";
-//                if (i < string_len - 1 && string.charAt(i+1) == '*'){
-//                    i ++;
-//                    token = token_table.test("**");
-//                    queue.add(token);
-//                }else {token = token_table.test("*");queue.add(token);}
-//            }
-//        }
-        //
         queue = StringToTokenTable(string);
         //
         return queue;
@@ -110,13 +48,19 @@ public class usedclass {//得到符号表
                 if (i < string_len - 1 && !Character.isLetter(string.charAt(i+1)))
                 {
                     token = token_table.test(test);
+                    if (token.getToken_type() == "ERRORTOKEN"){
+                        System.out.println("词法错误");
+                        System.exit(-1);
+                    }
                     queue.add(token);
                     test = "";
                 }
             }
-            else if (Character.isDigit(string.charAt(i))){//得到连续数字
+            else if (Character.isDigit(string.charAt(i)) || (string.charAt(i) == '.'
+                    && Character.isDigit(string.charAt(i-1)) && Character.isDigit(string.charAt(i+1)))){//得到连续数字
+
                 test += string.charAt(i);
-                if (i < string_len - 1 && !Character.isDigit(string.charAt(i+1)))
+                if (i < string_len - 1 && !Character.isDigit(string.charAt(i+1)) && string.charAt(i+1) != '.')
                 {
                     token = token_table.test(test);
                     queue.add(token);

@@ -14,6 +14,7 @@ public class sentence_pattern {//句子模式
     private boolean rot_pattern = false;
     private boolean scale_pattern = false;
     private boolean for_pattern = false;
+    private boolean setcolor_pattern = false;
 
     private boolean expression_pattern = false;
     private String[] all_fun = {
@@ -27,6 +28,7 @@ public class sentence_pattern {//句子模式
         else if (rot_pattern) pattern = "rot_pattern";
         else if (scale_pattern) pattern = "scale_pattern";
         else if (for_pattern) pattern = "for_pattern";
+        else if (setcolor_pattern) pattern = "setcolor_pattern";
     }
 
     public String getPattern() {
@@ -42,6 +44,7 @@ public class sentence_pattern {//句子模式
         else if (inString(token.getOriinpt())) expression_pattern = true;
         else if (token.getOriinpt() == "PI" || token.getOriinpt() == "E") const_pattern = true;
         else if (token.getOriinpt().equalsIgnoreCase("T")) vary_pattern = true;
+        else if (token.getOriinpt() == "SETCOLOR") setcolor_pattern = true;
     }
 
     public boolean isOrigin_pattern() {

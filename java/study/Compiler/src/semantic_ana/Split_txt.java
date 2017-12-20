@@ -31,12 +31,16 @@ public class Split_txt {//每次读一句话到另一个文本
 
     public void writeTo(){
         int flag = 0;
+        int commentFlag = 0;
         String string = new String();
         for (int i = 0;i < retainString.length();i++){
             if (flag == no){
                 string += retainString.charAt(i);//要写入文件的内容
             }
             if (retainString.charAt(i) == ';') flag++;
+            if (i < retainString.length()-2 && (retainString.charAt(i) == '-'
+                    && retainString.charAt(i-1) == '-') || (retainString.charAt(i) == '/' && retainString.charAt(i-1) == '/')) commentFlag++;
+            if (commentFlag > 0 && retainString.charAt(i) == '\n') flag++;
         }
 
         File file = new File("/home/fan/Compiler/src/lexical_analyzer/test1.txt");

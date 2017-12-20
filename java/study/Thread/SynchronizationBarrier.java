@@ -15,13 +15,13 @@ public class SynchronizationBarrier {
             for (int col = 0;col < matrix[0].length;col++)
                 matrix[row][col] = counter++;
         }
-        dump(matrix);
+        dump(matrix);//输出数组
         System.out.println();
         Solver solver = new Solver(matrix);
         System.out.println();
         dump(matrix);
     }
-    static void dump(float[][] matrix){
+    static void dump(float[][] matrix){//输出数组
         for (int row = 0;row < matrix.length;row++){
             for (int col = 0;col < matrix[0].length;col++)
                 System.out.println(matrix[row][col] + " ");
@@ -55,7 +55,7 @@ class Solver{
             while (!done()){
                 processRow(myRow);
                 try {
-                    barrier.await();
+                    barrier.await();//等待，知道所有参与者都在同步屏障上调用了await()方法
                 }catch (InterruptedException e){
                     return;
                 }catch (BrokenBarrierException e){

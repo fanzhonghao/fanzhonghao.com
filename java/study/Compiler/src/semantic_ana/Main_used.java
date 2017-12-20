@@ -20,9 +20,12 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 public class Main_used {//使用函数
     private double sca_a,sca_b,rot_c,ori_d,ori_e;
+    private String color;
 
     public static void main(String[] args) {
+        int pointCount = 0;
         LinkedList<pointClass> pointList = new LinkedList<pointClass>();
+        LinkedList<colorClass> colorList = new LinkedList<>();
         Main_used main_used = new Main_used();
 //        System.out.println(main_used.ori_d);
         String url = "/home/fan/Compiler/src/lexical_analyzer/test1.txt";
@@ -30,6 +33,9 @@ public class Main_used {//使用函数
         split_txt.readIn("/home/fan/Compiler/src/lexical_analyzer/test.txt");
         split_txt.writeTo();
 
+        //
+        colorList.add(new colorClass(0,"BLACK"));
+        //
         for (;split_txt.readFile() != "";){
             String string = split_txt.readFile();
             int j = string.length();
@@ -214,6 +220,15 @@ public class Main_used {//使用函数
                         main_used.sca_b = token2.getValue();
                         break;
                     }
+                    //
+                    case "SETCOLOR":{
+                        Token token1 = (Token) linkedList.get(2);
+                        main_used.color = token1.getOriinpt();
+                        colorClass colorClass1 = new colorClass(pointCount,main_used.color);
+                        colorList.add(colorClass1);
+                        break;
+                    }
+                    //
                     case "FOR": {
 //                        for (int i = 0;i < linkedList.size();i++){
 //                            Token token1 = (Token) linkedList.get(i);
@@ -233,6 +248,7 @@ public class Main_used {//使用函数
                         step = token1.getValue();
                         Token tokenFirst = (Token) linkedList.get(10);
                         Token tokenEnd = (Token) linkedList.get(12);
+
                         for (double p = begin;p <= end;p+=step){
 
                             //
@@ -287,9 +303,13 @@ public class Main_used {//使用函数
                             point.setX(point.getX()*main_used.sca_a*Math.cos(main_used.rot_c)+point.getY()*main_used.sca_b*Math.sin(main_used.rot_c)+main_used.ori_d);
                             point.setY(point.getY()*main_used.sca_b*Math.cos(main_used.rot_c)-point.getX()*main_used.sca_a*Math.sin(main_used.rot_c)+main_used.ori_e);
                             pointList.add(point);
+                            //
+                            pointCount++;
+                            //
                         }
                         break;
                     }
+
                 }
 
             }
@@ -302,16 +322,27 @@ public class Main_used {//使用函数
 //            System.out.println("X: " + point.getX() + " Y: " + point.getY());
 //        }
         //点已经存储在pointlist中
+        //
+        //
+        int color = colorList.size();
+        for (int i = 0;i < color;i++){
+            colorClass colorClass1 = colorList.get(i);
+            System.out.println(colorClass1.getColor() + " : " + colorClass1.getNo());
+        }
+        //
+
+        //
         new drawPoint().draw(pointList);
     }
-    private Main_used(){
+    public Main_used(){
         sca_a = 1;
         sca_b = 1;
         rot_c = 0;
         ori_d = 0;
         ori_e = 0;
+        color = "BLACK";
     }
-    private LinkedList<Token> setTInExp(LinkedList<Token> linkedList,double x){//替换左右Token List中的T
+    public LinkedList<Token> setTInExp(LinkedList<Token> linkedList,double x){//替换左右Token List中的T
         Token token = new Token("CONST_ID",String.valueOf(x),x,"NULL");
         LinkedList<Token> linkedList1 = new LinkedList<Token>();
         for (int i = 0;i < linkedList.size();i++)
