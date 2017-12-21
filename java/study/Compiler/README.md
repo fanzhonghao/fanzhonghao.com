@@ -15,45 +15,45 @@
 
 ### 绘图示例：
 #### 源程序：
-> ROT IS 0;
-> ORIGIN IS (50,400);
-> SCALE IS (2,1);
-> FOR T FROM 0 TO 300 STEP 1 DRAW(T,0);
-> //横坐标
-> FOR T FROM 0 TO 300 STEP 1 DRAW(0,-T);
-> --纵坐标
-> SCALE IS (1,1);
-> FOR T FROM 0 TO 300 STEP 1 DRAW(T,-T);
-> SCALE IS (20,0.1);
-> FOR T FROM 0 TO 50 STEP 0.1 DRAW(T,-EXP(T));
-> SCALE IS (2,0.1);
-> FOR T FROM 0 TO 100 STEP 1 DRAW(T,-(T*T));
-> SCALE IS (10,5);
-> FOR T FROM 0 TO 60 STEP 1 DRAW(T,-SQRT(T));
-> origin is (50,400);
-> scale is (50,50);
-> for t from 0 to 100 step 1 draw(sin(t),cos(t));
->
-> setcolor(blue);
-> origin is (400,200);
-> scale is (50,50);
-> for t from 0 to 100 step 1 draw(sin(t),cos(t));
-> setcolor(black);
-> origin is (500,200);
-> scale is (50,50);
-> for t from 0 to 100 step 1 draw(sin(t),cos(t));
-> setcolor(red);
-> origin is (600,200);
-> scale is (50,50);
-> for t from 0 to 100 step 1 draw(sin(t),cos(t));
-> setcolor(yellow);
-> origin is (450,250);
-> scale is (50,50);
-> for t from 0 to 100 step 1 draw(sin(t),cos(t));
-> setcolor(green);
-> origin is (550,250);
-> scale is (50,50);
-> for t from 0 to 100 step 1 draw(sin(t),cos(t));
+> ROT IS 0;  
+> ORIGIN IS (50,400);  
+> SCALE IS (2,1);  
+> FOR T FROM 0 TO 300 STEP 1 DRAW(T,0);  
+> //横坐标  
+> FOR T FROM 0 TO 300 STEP 1 DRAW(0,-T);  
+> --纵坐标  
+> SCALE IS (1,1);  
+> FOR T FROM 0 TO 300 STEP 1 DRAW(T,-T);  
+> SCALE IS (20,0.1);  
+> FOR T FROM 0 TO 50 STEP 0.1 DRAW(T,-EXP(T));  
+> SCALE IS (2,0.1);  
+> FOR T FROM 0 TO 100 STEP 1 DRAW(T,-(T*T));  
+> SCALE IS (10,5);  
+> FOR T FROM 0 TO 60 STEP 1 DRAW(T,-SQRT(T));  
+> origin is (50,400);  
+> scale is (50,50);  
+> for t from 0 to 100 step 1 draw(sin(t),cos(t));  
+>  
+> setcolor(blue);  
+> origin is (400,200);  
+> scale is (50,50);  
+> for t from 0 to 100 step 1 draw(sin(t),cos(t));  
+> setcolor(black);  
+> origin is (500,200);  
+> scale is (50,50);  
+> for t from 0 to 100 step 1 draw(sin(t),cos(t));  
+> setcolor(red);  
+> origin is (600,200);  
+> scale is (50,50);  
+> for t from 0 to 100 step 1 draw(sin(t),cos(t));  
+> setcolor(yellow);  
+> origin is (450,250);  
+> scale is (50,50);  
+> for t from 0 to 100 step 1 draw(sin(t),cos(t));  
+> setcolor(green);  
+> origin is (550,250);  
+> scale is (50,50);  
+> for t from 0 to 100 step 1 draw(sin(t),cos(t));  
 
 #### 绘图结果：
 <img src="pic.png"/>
