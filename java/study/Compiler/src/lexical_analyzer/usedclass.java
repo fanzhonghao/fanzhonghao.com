@@ -106,16 +106,4 @@ public class usedclass {//通过词法分析，得到符号表
         }
         return queue;
     }
-
-//    public static void main(String[] args) {
-//        BlockingQueue<Token> queue = new LinkedBlockingQueue<Token>(1000);
-//        usedclass u = new usedclass();
-//        Token token;
-//        queue = u.lexi_ana("/home/fan/Compiler/src/lexical_analyzer/test.txt");
-//        while (!queue.isEmpty()){
-//            token = queue.poll();
-//            System.out.printf("%10s%12s   %.10f %10s%n",token.getToken_type(),token.getOriinpt(),token.getValue(),token.getFunc());
-//        }
-//        return;
-//    }
 }

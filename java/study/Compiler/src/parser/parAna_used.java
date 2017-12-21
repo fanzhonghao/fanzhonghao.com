@@ -23,14 +23,4 @@ public class parAna_used {
         LinkedList linkedList = new LinkedList(queue);
         return linkedList;
     }
-
-    public static void main(String[] args) {
-        LinkedList linkedList = new parAna_used().paraAna("/home/fan/Compiler/src/lexical_analyzer/test2.txt");
-        for (int i = 0;i < linkedList.size();i++)
-        {
-            Token token =(Token) linkedList.get(i);
-            System.out.println(token.getToken_type() + " " + token.getOriinpt() + " " + token.getValue());
-        }
-    }
-
 }

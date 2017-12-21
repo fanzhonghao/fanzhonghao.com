@@ -27,20 +27,15 @@ public class Main_used {//使用函数
         LinkedList<pointClass> pointList = new LinkedList<pointClass>();
         LinkedList<colorClass> colorList = new LinkedList<>();
         Main_used main_used = new Main_used();
-//        System.out.println(main_used.ori_d);
         String url = "/home/fan/Compiler/src/lexical_analyzer/test1.txt";
         Split_txt split_txt = new Split_txt();
         split_txt.readIn("/home/fan/Compiler/src/lexical_analyzer/test.txt");
         split_txt.writeTo();
 
-        //
-//        colorList.add(new colorClass(0,"BLACK"));
-        //
         for (;split_txt.readFile() != "";){
             String string = split_txt.readFile();
             int j = string.length();
             if (j == 1) break;
-//            System.out.println("string: " + string);
             String string1 = new String();
             int flag = 0;
             for (int i = 0;i < j;i++){
@@ -92,16 +87,13 @@ public class Main_used {//使用函数
                 }
                 string2 += new String("t,t);");
 
-                //重写test1文件
-                System.out.println("Begin rewrite: ");
-                //
+
 
                 File file = new File("/home/fan/Compiler/src/lexical_analyzer/test1.txt");
                 if (file.exists()){
                     file.delete();
                     try {
                         file.createNewFile();
-                        System.out.println("删除后创建文件成功");
                     } catch (IOException e) {
                         System.out.println("创建文件错误");
                         e.printStackTrace();
@@ -110,7 +102,6 @@ public class Main_used {//使用函数
                 }else {
                     try {
                         file.createNewFile();
-                        System.out.println("没有该文件，创建文件成功");
                     } catch (IOException e) {
                         e.printStackTrace();
                         System.exit(-1);
@@ -239,18 +230,13 @@ public class Main_used {//使用函数
                         double begin;
                         double end;
                         double step;
-//                        pointClass point = new pointClass();
                         Token token1 = (Token) linkedList.get(3);
                         begin = token1.getValue();
                         token1 = (Token) linkedList.get(5);
                         end = token1.getValue();
                         token1 = (Token) linkedList.get(7);
                         step = token1.getValue();
-                        Token tokenFirst = (Token) linkedList.get(10);
-                        Token tokenEnd = (Token) linkedList.get(12);
-
                         for (double p = begin;p <= end;p+=step){
-
                             //
                             LinkedList l = new Main_used().setTInExp(l_exp,p);
                             //
@@ -279,8 +265,6 @@ public class Main_used {//使用函数
                             }
                             r = new func_filter().filterFunc(tokens1);
                             double r_y = new expression_compute().compute(r);
-//                            System.out.println("l_x: " + l_x + "r_y: " + r_y);
-                            //
 
                             pointClass point = new pointClass();
                             //
@@ -289,17 +273,6 @@ public class Main_used {//使用函数
                             System.out.println("p: " + p);
                             System.out.println("point: " + l_x + " , " + r_y);
                             //
-//                            if (tokenFirst.getToken_type() == "T"){
-//                                point.setX(p);
-//                            }else if (tokenFirst.getToken_type() == "CONST_ID"){
-//                                point.setX(tokenFirst.getValue());
-//                            }
-//                            if (tokenEnd.getToken_type() == "T"){
-//                                point.setY(p);
-//                            }else if (tokenEnd.getToken_type() == "CONST_ID"){
-//                                point.setY(tokenEnd.getValue());
-//                            }
-
                             point.setX(point.getX()*main_used.sca_a*Math.cos(main_used.rot_c)+point.getY()*main_used.sca_b*Math.sin(main_used.rot_c)+main_used.ori_d);
                             point.setY(point.getY()*main_used.sca_b*Math.cos(main_used.rot_c)-point.getX()*main_used.sca_a*Math.sin(main_used.rot_c)+main_used.ori_e);
                             pointList.add(point);

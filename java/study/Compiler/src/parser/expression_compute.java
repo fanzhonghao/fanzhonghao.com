@@ -42,8 +42,6 @@ public class expression_compute {//计算带括号的表达式 Token[]
             Token token_t =(Token) queue.get(i);
             Token token = new Token(token_t.getToken_type(),token_t.getOriinpt(),token_t.getValue(),token_t.getFunc());
             token_priority tokenPriority = new token_priority();//优先级算符
-
-//            System.out.println("expression: " + token.getToken_type() + " " + token.getValue());
             switch (token.getToken_type()){//确定优先级并放入list中
                 case "L_BRACKET": flag++; break;//提高优先级并删除左括号
                 case "R_BRACKET": flag--; break;//提高优先级并删除右括号
@@ -63,20 +61,8 @@ public class expression_compute {//计算带括号的表达式 Token[]
                 list_no++;set.add(flag*3+3);break;
             }
         }
-
-//        System.out.println("list: " + 3 + " " + list.get(3).getToken().getToken_type() + " " + list.get(3).getToken().getValue());
-
-//        int list_size = list.size();
-//        for (int k = 0;k < list_size;k++)
-//        {
-//            System.out.println(k + " list: " + list.get(k).getToken().getToken_type()+ " " + list.get(k).getToken().getValue());
-//        }
-
-//        System.out.print("优先级： ");
         for (;set.size() != 0; ){
-//            System.out.println("set last: " + set.last());
             int pri = (int) set.last();//当前最高优先级
-//            System.out.println(pri + "  ");
             set.remove(pri);
             int no = list.size();
             for (int i = 1;i < no;i++){

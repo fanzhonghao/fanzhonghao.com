@@ -32,12 +32,8 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
         }
 
         sentence_pattern sentencePattern = new sentence_pattern();
-
-//        if (linkedList.size() == 0) return
-
         Token token1 =(Token) linkedList.get(0);
         sentencePattern.setPattern(token1);
-
         //开始匹配句子,判定语法模式
         switch (sentencePattern.getPattern()){
             case "origin_pattern":
@@ -191,12 +187,6 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
                 System.exit(-1);
             }
         }
-
-        //测试
-//        Token token123 =(Token) linkedList.get(3);
-//        System.out.println("list 3: " + token123.getToken_type() + " " + token123.getOriinpt() + " " + token123.getValue());
-        //
-
         for (int i = 5;;){
             Token token1 =(Token) linkedList.get(i);
             if (in_pattern(token1.getToken_type())){//正常模式
@@ -213,10 +203,6 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
                 System.exit(-1);
             }
         }
-        //测试
-//        Token token123 =(Token) linkedList.get(5);
-//        System.out.println("list 5: " + token123.getToken_type() + " " + token123.getOriinpt() + " " + token123.getValue());
-        //
         for (int i = 7;;){
             Token token1 =(Token) linkedList.get(i);
             if (in_pattern(token1.getToken_type())){//正常模式
@@ -233,10 +219,6 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
                 System.exit(-1);
             }
         }
-        //测试
-//        Token token123 =(Token) linkedList.get(7);
-//        System.out.println("list 5: " + token123.getToken_type() + " " + token123.getOriinpt() + " " + token123.getValue());
-        //
         Token token10 =(Token) linkedList.get(9);
         if (token10.getOriinpt() != "("){
             System.out.println("语法错误 7");
@@ -319,22 +301,5 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
 
         return linkedList;
     }
-    //
-//测试
-//    public static void main(String[] args) {
-//        BlockingQueue<Token> queue = new usedclass().lexi_ana("/home/fan/Compiler/src/lexical_analyzer/test2.txt");
-//        LinkedList linkedList = new LinkedList(queue);
-//
-////        for (int i = 0;i < linkedList.size();i++){
-////            Token token =(Token) linkedList.get(i);
-////            System.out.println(token.getToken_type() + " " + token.getOriinpt() + " " + token.getValue());
-////        }
-//
-//        queue = new analySentence().alaly_sentence(queue);
-//        for (;!queue.isEmpty();){
-//            Token token = queue.poll();
-//            System.out.println("test: " + token.getToken_type() + " " +token.getOriinpt() + " " + token.getValue());
-//        }
-//    }
-//
+
 }

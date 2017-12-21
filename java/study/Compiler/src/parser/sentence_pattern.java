@@ -46,34 +46,6 @@ public class sentence_pattern {//句子模式
         else if (token.getOriinpt().equalsIgnoreCase("T")) vary_pattern = true;
         else if (token.getOriinpt() == "SETCOLOR") setcolor_pattern = true;
     }
-
-    public boolean isOrigin_pattern() {
-        return origin_pattern;
-    }
-
-    public boolean isRot_pattern() {
-        return rot_pattern;
-    }
-
-    public boolean isScale_pattern() {
-        return scale_pattern;
-    }
-
-    public boolean isFor_pattern() {
-        return for_pattern;
-    }
-
-    public boolean isExpression_pattern() {
-        return expression_pattern;
-    }
-
-    public boolean isConst_pattern() {
-        return const_pattern;
-    }
-
-    public boolean isVary_pattern() {
-        return vary_pattern;
-    }
     private boolean inString(String s){
         for (int i = 0;i < 6;i++)
             if (s.equals(all_fun[i])) return true;
