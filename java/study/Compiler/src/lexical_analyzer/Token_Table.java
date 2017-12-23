@@ -1,9 +1,4 @@
 package lexical_analyzer;
-
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
-import javax.swing.text.html.parser.Parser;
-
 /**
  * Author:fan
  * Date: 17-12-11
@@ -43,17 +38,13 @@ public class Token_Table {//记录符号表
             new Token("MUL","*",0.0,"NULL"),
             new Token("DIV","/",0.0,"NULL"),
             new Token("POWER","**",0.0,"NULL"),//29
-
-            //
             new Token("SETCOLOR","SETCOLOR",0.0,"SETCOLOR"),//30
             new Token("COLOR","RED",0.0,"NULL"),
             new Token("COLOR","YELLOW",0.0,"NULL"),
             new Token("COLOR","BLUE",0.0,"NULL"),
             new Token("COLOR","GREEN",0.0,"NULL"),
             new Token("COLOR","BLACK",0.0,"NULL")//35
-            //
             //没有数字串和其它的字母串
-
     };
     public Token test(String a){
         if (a.equalsIgnoreCase("PI")) return tokens[0];
@@ -85,17 +76,13 @@ public class Token_Table {//记录符号表
         else if (a.equalsIgnoreCase("*")) return tokens[27];
         else if (a.equalsIgnoreCase("/")) return tokens[28];
         else if (a.equalsIgnoreCase("**")) return tokens[29];
-        //
         else if (a.equalsIgnoreCase("setcolor")) return tokens[30];
         else if (a.equalsIgnoreCase("red")) return tokens[31];
         else if (a.equalsIgnoreCase("yellow")) return tokens[32];
         else if (a.equalsIgnoreCase("blue")) return tokens[33];
         else if (a.equalsIgnoreCase("green")) return tokens[34];
         else if (a.equalsIgnoreCase("black")) return tokens[35];
-        //
         else if (Character.isDigit(a.charAt(0))) return new Token("CONST_ID",a,Double.parseDouble(a),"NULL");
         return tokens[18];
     }
-
-
 }

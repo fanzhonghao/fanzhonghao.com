@@ -52,7 +52,7 @@ public class Main_used {//使用函数
             if (string1.equalsIgnoreCase("FOR")){
                 LinkedList linkedList1 = new LinkedList();
                 int begin = 0,end = 0;//左右括号的位置
-//                System.out.println("FOR connect");
+
                 String string2 = new String();
                 for (int i = j-1;i >= 0;i--){
                     if (string.charAt(i) == ')'){

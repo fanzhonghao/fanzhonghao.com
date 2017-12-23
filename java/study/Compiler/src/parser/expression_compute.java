@@ -33,7 +33,12 @@ public class expression_compute {//计算带括号的表达式 Token[]
             queue.add(0,tokenadd);
         }
 
-        int flag = 0;//表示当前优先级
+
+
+
+
+
+        int flag = 0;//表示当前括号个数
 
         int queue_size = queue.size();
         int list_no = 0;
@@ -61,6 +66,12 @@ public class expression_compute {//计算带括号的表达式 Token[]
                 list_no++;set.add(flag*3+3);break;
             }
         }
+        /*
+        if (flag != 0){
+            System.out.println("括号个数错误");
+            System.exit(-1);
+        }
+        */
         for (;set.size() != 0; ){
             int pri = (int) set.last();//当前最高优先级
             set.remove(pri);
@@ -70,6 +81,10 @@ public class expression_compute {//计算带括号的表达式 Token[]
                 if (list.get(i).getPriority() == pri){//优先级匹配
                     temp = 1;
                     double r = 0;
+                    if (i == list.size() - 1 || list.get(i+1).getToken().getToken_type() != "CONST_ID") {
+                        System.out.println("算术表达式错误");
+                        System.exit(-1);
+                    }
                     if (list.get(i).getToken().getOriinpt() == "+"){
                         r = list.get(i-1).getToken().getValue() + list.get(i+1).getToken().getValue();
                     }else if (list.get(i).getToken().getOriinpt() == "-"){

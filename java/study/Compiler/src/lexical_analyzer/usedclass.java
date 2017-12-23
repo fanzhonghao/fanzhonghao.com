@@ -30,12 +30,11 @@ public class usedclass {//通过词法分析，得到符号表
             System.out.println("打开文件错误");
             e.printStackTrace();//
         }
-
         queue = StringToTokenTable(string);
-        //
         return queue;
     }
 
+    //将字符串转换为符号表
     public BlockingQueue<Token> StringToTokenTable(String string){
         int string_len = string.length();
         String test = new String();
@@ -56,7 +55,6 @@ public class usedclass {//通过词法分析，得到符号表
             }
             else if (Character.isDigit(string.charAt(i)) || (string.charAt(i) == '.'
                     && Character.isDigit(string.charAt(i-1)) && Character.isDigit(string.charAt(i+1)))){//得到连续数字
-
                 test += string.charAt(i);
                 if (i < string_len - 1 && !Character.isDigit(string.charAt(i+1)) && string.charAt(i+1) != '.')
                 {
@@ -89,7 +87,8 @@ public class usedclass {//通过词法分析，得到符号表
                     queue.add(token);
                 }
             }
-            else if (string.charAt(i) == ';' || string.charAt(i) == '(' || string.charAt(i) == ')' || string.charAt(i) == ','
+            else if (string.charAt(i) == ';' || string.charAt(i) == '(' || string.charAt(i) == ')' ||
+                    string.charAt(i) == ','
                     || string.charAt(i) == '+'){//匹配 ; ( ) , +
                 test = "";
                 token = token_table.test(String.valueOf(string.charAt(i)));

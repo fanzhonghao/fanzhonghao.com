@@ -8,6 +8,7 @@ import lexical_analyzer.usedclass;
 
 import java.util.LinkedList;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Author:fan
@@ -17,8 +18,8 @@ import java.util.concurrent.BlockingQueue;
  */
 public class analySentence {//分析传进来的句子结构，并且替换函数和表达式,目标返回一句话
     public BlockingQueue<Token> alaly_sentence(BlockingQueue<Token> queue){
-        LinkedList linkedList = new LinkedList();
-        linkedList = new func_filter().filterFunc(queue);//过滤函数
+        LinkedList linkedList = new LinkedList(queue);
+
         //替换PI和E
         for (int i = 0;i < linkedList.size();i++){
             Token token1 =(Token) linkedList.get(i);
@@ -30,6 +31,7 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
                 linkedList.remove(i);linkedList.add(i,token11);
             }
         }
+        linkedList = new func_filter().filterFunc(link2queue(linkedList));//过滤函数
 
         sentence_pattern sentencePattern = new sentence_pattern();
         Token token1 =(Token) linkedList.get(0);
@@ -301,5 +303,11 @@ public class analySentence {//分析传进来的句子结构，并且替换函�
 
         return linkedList;
     }
-
+    private BlockingQueue<Token> link2queue(LinkedList<Token> linkedList){
+        BlockingQueue<Token> queue = new LinkedBlockingQueue<>(100);
+        for (int i = 0;i < linkedList.size();i++){
+            queue.add(linkedList.get(i));
+        }
+        return queue;
+    }
 }
