@@ -8,7 +8,7 @@
         <?php
         $host = 'localhost';
         $username = 'fan';
-        $password = '@asd5211314';
+        $password = 'xxx';
         $port = 3306;
         $database = "test";
         $db= mysqli_connect($host, $username, $password, $database, $port)
