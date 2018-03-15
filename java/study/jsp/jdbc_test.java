@@ -6,7 +6,7 @@ public class jdbc_test{
     Connection con;
     try {
         Class.forName("com.mysql.jdbc.Driver");//加载驱动器
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","@asd5211314");//连接本地数据库
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","******");//连接本地数据库
         if (con != null)System.out.println("连接成功");
       }catch (Exception e) {
         e.printStackTrace();
