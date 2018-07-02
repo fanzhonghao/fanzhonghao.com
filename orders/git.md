@@ -10,10 +10,10 @@ Basesd on ubuntu:
 `git remote add origin "your github url"`
 > the origin stand for your github url in the following operation before uploading your codes
 
-+ you should check your warehouse by clone like this  
++ you can clone one warehouse by command like this  
 `git clone "your address"`
 
-+ after this you can updata your warehouse by
++ and you can updata your warehouse by
 `git pull`
 
 + then if it's normal, you can upload your codes by these three steps:
