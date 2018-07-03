@@ -48,4 +48,27 @@ Change your origin
         1. git remote rm origin
         2. git remote add origin url --change after delete
 
+About keep some logs to migrate project on GitHub  
+---
+first clone your target progect use
+> git clone url  
+    
+next you can get a floder which there names it test, git into it,  then rollback to the previous version use
+> 1. git log  -- find the target commit serial number  
+> 2. git reset --hard "serial num"
+
+git into the floder that we want to submit  
+use things under the target floder replace the things under floder that we want to submit.  
+at last submit it  
+> 1. git config --global user.name "name"          -- if you didn't set it  
+> 2. git config --global user.email "email"        -- if you didn't set it  
+> 3. git remote rm origin                          -- it may be set before  
+> 4. git remote add origin "target url"  
+> 5. git add .  
+> 6. git commit -m "comment"  
+> 7. git push -u origin master  
+
+after this you can submit one version.  
+
+---
  all of these
